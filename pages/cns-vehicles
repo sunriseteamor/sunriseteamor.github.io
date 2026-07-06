@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техника КНС — Sunrise of the Republic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Sunrise of the Republic</a>
+
+            <div class="menu">
+                <a href="charter.html">Устав</a>
+                <a href="rules.html">Правила</a>
+                <a href="positions.html">Должности</a>
+
+                <div class="dropdown">
+                    <span class="dropbtn">Формирование ▾</span>
+                    <div class="dropdown-content">
+                        <a href="rsb.html">РСБ</a>
+                        <a href="4th-fleet.html">4-й Флот</a>
+                        <a href="17th.html">17-й Гвардейский Батальон</a>
+                        <a href="regular.html">Регулярные Формирования</a>
+                        <a href="bso.html">БСО</a>
+                        <a href="ark.html">ARC</a>
+                        <a href="arf.html">ARF</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <span class="dropbtn">Дополнительно ▾</span>
+                    <div class="dropdown-content">
+                        <a href="tribunal.html">Трибунал</a>
+                        <a href="immunity.html">Список Неприкосновенности</a>
+                        <a href="shock.html">Ударный Батальон</a>
+                        <a href="specializations.html">Специализации</a>
+                        <a href="rep-weapons.html">Вооружение республики</a>
+                        <a href="cns-weapons.html">Вооружение КНС</a>
+                        <a href="rep-vehicles.html">Техника республики</a>
+                        <a href="cns-vehicles.html" style="color: #4ebcff;">Техника КНС</a>
+                    </div>
+                </div>
+
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-content vehicles-page">
+        <div class="page-container">
+            <h1>Техника КНС</h1>
+            <p class="page-subtitle">Наземная, воздушная и космическая техника Конфедерации Независимых Систем</p>
+
+            <!-- ===== НАВИГАЦИЯ ПО РАЗДЕЛАМ ===== -->
+            <div class="vehicles-nav">
+                <a href="#ground" class="nav-btn">Наземная техника</a>
+                <a href="#air" class="nav-btn">Воздушная техника</a>
+                <a href="#space" class="nav-btn">Космическая техника</a>
+            </div>
+
+            <div class="vehicles-text">
+
+                <!-- ============================================================ -->
+                <!-- 1. НАЗЕМНАЯ ТЕХНИКА КНС -->
+                <!-- ============================================================ -->
+                <h2 id="ground" class="vehicles-section-title">Наземная техника</h2>
+
+                <!-- STAP -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/stap.png" alt="STAP">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">STAP — одноместная воздушная платформа</h3>
+                        <p>Одноместная воздушная платформа (STAP — Single Trooper Aerial Platform), также известная как STAP-1 или просто STAP — проворная летающая машина, разработанная для использования боевыми дроидами B1 Торговой Федерации и Конфедерации. Использовалась для разведывательных и противопехотных операций. Открытая конструкция платформы делала пилота уязвимым, что заставляло полагаться на скорость и манёвренность для уклонения от огня противника.</p>
+                        <ul>
+                            <li><strong>Экипаж:</strong> 1 дроид</li>
+                            <li><strong>Вооружение:</strong> Сдвоенная бластерная пушка</li>
+                            <li><strong>Тип:</strong> Репульсорная платформа</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DSD1 -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/dsd1.png" alt="DSD1 карликовый дроид-паук">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">DSD1 — карликовый дроид-паук</h3>
+                        <p>Карликовый дроид-паук DSD1 (DSD1 dwarf spider droid), также известный как подземный дроид-паук за способность проникать в узкие пространства — модель боевого дроида, разработанная компанией Оружейные Цеха Бактоид. Дроид был вооружен мощной лазерной пушкой, способной как к беглому огню, так и к стрельбе мощными одиночными зарядами. Многие из них были оснащены механизмом самоуничтожения.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Оружейные Цеха Бактоид</li>
+                            <li><strong>Вооружение:</strong> Мощная лазерная пушка</li>
+                            <li><strong>Особенности:</strong> Механизм самоуничтожения</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- A-DSD -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/a-dsd.png" alt="A-DSD усовершенствованный дроид-паук">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">A-DSD — усовершенствованный дроид-паук</h3>
+                        <p>Улучшенный карликовый дроид-паук A-DSD — версия DSD-1 с лучшей бронёй и вооружением, способная работать в полной темноте. Тяжёлая бластерная пушка была способна пробивать броню лёгкой и средней бронетехники Республики, а гранатомёты являлись эффективным противопехотным средством. Бронещиты на передних ногах делали машину неуязвимой для большей части тяжёлого вооружения.</p>
+                        <ul>
+                            <li><strong>Тип:</strong> Улучшенный дроид-паук</li>
+                            <li><strong>Вооружение:</strong> Тяжёлая бластерная пушка, гранатомёты</li>
+                            <li><strong>Особенности:</strong> Бронещиты, работа в темноте</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GAT -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/gat.png" alt="GAT наземный бронированный танк">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">GAT — наземный бронированный танк</h3>
+                        <p>Наземный бронированный танк (GAT) — лёгкий репульсорный танк, использовавшийся в начале Войны клонов как быстроходный атакующий танк. Его основным противником был республиканский штурмовой танк TX-130. Лучше всего GAT показал себя в разведке и тактике быстрого нападения из-за лёгкой брони.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Оружейные Цеха Бактоид</li>
+                            <li><strong>Вооружение:</strong> 2 средних лазерных орудия, 2 ракетные установки</li>
+                            <li><strong>Тип:</strong> Лёгкий репульсорный танк</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NR-N99 -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/nr-n99.png" alt="NR-N99 Убеждающий">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">NR-N99 «Убеждающий»</h3>
+                        <p>Дроид-танк NR-N99 типа «Убеждающий» — танк КНС, впервые использованный против Великой армии Республики во время битвы на Джеонозисе. Большую серию и распространенность танку принесла его универсальность, неприхотливость и возможность быстрой смены вооружения. Танк обладал отличной проходимостью в густых лесах, водной и болотистой местности.</p>
+                        <ul>
+                            <li><strong>Тип:</strong> Дроид-танк</li>
+                            <li><strong>Особенности:</strong> Универсальность, быстрая смена вооружения</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- J-1 -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/j-1.png" alt="J-1 протонная пушка">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">J-1 — полуавтономная протонная пушка</h3>
+                        <p>Полуавтономная протонная пушка J-1 — артиллерийское орудие КНС, используемое в годы Войн клонов.</p>
+                        <ul>
+                            <li><strong>Тип:</strong> Артиллерийское орудие</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- IG-227 -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/ig-227.png" alt="IG-227 Огненный град">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">IG-227 «Огненный град»</h3>
+                        <p>Дроид-танк IG-227 типа «Огненный град», также известный как колёсный дроид — боевая машина, представлявшая собой мобильную ракетную платформу. Передвигался на двух больших колёсах, что давало возможность действовать практически на любой поверхности. Основным вооружением являлись ракетные пусковые установки залпового огня по 15 самонаводящихся ракет каждая.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Машиностроение Хаор Челл</li>
+                            <li><strong>Вооружение:</strong> 2 ракетные установки (по 15 ракет), спаренная бластерная пушка</li>
+                            <li><strong>Особенности:</strong> Колёсный движитель</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- AAT -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/aat.png" alt="AAT бронированный штурмовой танк">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">AAT — бронированный штурмовой танк</h3>
+                        <p>Бронированный штурмовой танк (AAT) — основная наступательная бронетехника Торговой Федерации. AAT широко использовались для уничтожения пехоты и техники врага. После начала войны клонов, AAT в огромных количествах поставляла и использовала на поле боя Конфедерация. Танки имели ракетные установки, тяжёлые противопехотные пушки и мощное противотанковое орудие на вращающейся башне.</p>
+                        <ul>
+                            <li><strong>Экипаж:</strong> 4 дроида B1</li>
+                            <li><strong>Вооружение:</strong> Ракетные установки, тяжёлые пушки, противотанковое орудие</li>
+                            <li><strong>Тип:</strong> Средний штурмовой танк</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HAG-M -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/hag-m.png" alt="HAG-M тяжёлая артиллерийская пушка">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">HAG-M — тяжёлая артиллерийская пушка</h3>
+                        <p>HAG-M, также известная как тяжёлая артиллерийская пушка или миномётный танк — мобильное репульсорное артиллерийское орудие. Минометная пушка была достаточно мощной, чтобы легко уничтожать шагоходы Республики. Имел хорошую броню, что делало его устойчивым к лазерным пушкам, но также приводило к плохой скорости и маневренности.</p>
+                        <ul>
+                            <li><strong>Тип:</strong> Мобильная артиллерийская установка</li>
+                            <li><strong>Вооружение:</strong> Мощная миномётная пушка</li>
+                            <li><strong>Особенности:</strong> Тяжёлая броня, малая скорость</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MTT -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/mtt.png" alt="MTT многоцелевой транспорт">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">MTT — многоцелевой транспорт</h3>
+                        <p>MTT (Multi-Troop Transport) — транспорт, предназначенный для перевозки боевых дроидов и доставки их к месту сражения. Тяжёлое репульсорное транспортное средство может перевозить до 112 обычных боевых дроидов B1 или до 20 дройдек. Управляется специальными OOM дроидами.</p>
+                        <ul>
+                            <li><strong>Вместимость:</strong> 112 дроидов B1 или 20 дройдек</li>
+                            <li><strong>Управление:</strong> OOM дроиды</li>
+                            <li><strong>Тип:</strong> Тяжёлый репульсорный транспорт</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- OG-9 -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/og-9.png" alt="OG-9 самонаводящийся дроид-паук">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">OG-9 — самонаводящийся дроид-паук</h3>
+                        <p>Самонаводящийся дроид-паук OG-9 — творение «Оружейных Цехов Бактоид», состоявшее на вооружении КНС. Имел тяжелую броню и использовался как против пехоты, так и против тяжёлой техники. Благодаря своему высокому росту дроид мог накрывать огнем довольно обширные площади. Главным оружием была лазерная пушка, эффективно снимавшая защитные экраны и уничтожавшая тяжёлую технику.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Оружейные Цеха Бактоид</li>
+                            <li><strong>Вооружение:</strong> Тяжёлая лазерная пушка, противопехотная пушка</li>
+                            <li><strong>Особенности:</strong> Ядерный реактор</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Protodeka -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/protodeka.png" alt="Protodeka">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Protodeka</h3>
+                        <p>Протодека — боевой дроид в форме репульсорной оружейной платформы, производившийся компанией «Индустрии Джеонозиса». Была вооружена тяжёлыми турболазерами и смертоносными установками дальнобойных самонаводящихся ракет. Создана как мобильное наземное осадное орудие, медлительная и тяжёло бронированная.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Индустрии Джеонозиса</li>
+                            <li><strong>Вооружение:</strong> Турболазеры, самонаводящиеся ракеты</li>
+                            <li><strong>Особенности:</strong> Сейсмический излучатель, клешня</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Super Tank -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/super-tank.png" alt="Super Tank">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Super Tank</h3>
+                        <p>Супертанки были оснащены двумя скорострельными ракетными установками наверху и четырьмя сдвоенными противопехотными бластерами по бокам снизу корпуса. Управлялся двумя дроидами. Имел настолько крепкую лобовую броню, что ни одно оружие (за исключением светового меча) не смогло нанести ей урон.</p>
+                        <ul>
+                            <li><strong>Экипаж:</strong> 2 дроида</li>
+                            <li><strong>Вооружение:</strong> Скорострельные ракетные установки, противопехотные бластеры</li>
+                            <li><strong>Особенности:</strong> Крепкая лобовая броня</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Octuptarra -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/octuptarra.png" alt="Octuptarra combat tri-droid">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Octuptarra — боевой три-дроид</h3>
+                        <p>Боевые дроиды типа «Октаптарра» — усовершенствованные боевые автоматы, использовавшиеся Техносоюзом и КНС. Трёхногие паукообразные автоматы имели большую шарообразную голову с лазерными турелями. Фоторецепторы давали круговой обзор, а шарнирный вращающийся блок позволял незамедлительно открывать огонь. Существовали вирусные варианты, заполненные газообразным вирусом.</p>
+                        <ul>
+                            <li><strong>Высота:</strong> 3,6 м</li>
+                            <li><strong>Вооружение:</strong> 3 лазерные турели</li>
+                            <li><strong>Особенности:</strong> Круговой обзор, вирусные варианты</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Troop Transport -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/troop-transport.png" alt="Troop Transport">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Troop Transport — транспортёр дроидов</h3>
+                        <p>Репульсорное транспортное средство, использовавшееся Торговой Федерацией для переброски боевых дроидов типа B1. Облегченный вариант MTT, не нёс вооружения и тяжелой брони. Мог перевозить до 112 дроидов B1 или до 20 дройдек. Управлялся двумя дроидами-водителями.</p>
+                        <ul>
+                            <li><strong>Вместимость:</strong> 112 дроидов B1 или 20 дройдек</li>
+                            <li><strong>Управление:</strong> 2 дроида-водителя</li>
+                            <li><strong>Особенности:</strong> Облегчённая версия MTT</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- 2. ВОЗДУШНАЯ ТЕХНИКА КНС -->
+                <!-- ============================================================ -->
+                <h2 id="air" class="vehicles-section-title">Воздушная техника</h2>
+
+                <!-- Vulture -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/vulture-class.png" alt="Vulture-class дроид-истребитель">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Vulture-class — дроид-истребитель «Стервятник»</h3>
+                        <p>Боевой дроид-истребитель с изменяемой геометрией модели I, или истребитель «Стервятник» — истребитель, управляемый дроидным центральным процессором. Имел компактный корпус, множество огневых точек и внешний облик насекомого. Нёс четыре бластерные пушки и две пусковые установки для энергетических торпед. Мог трансформироваться в шагающую орудийную платформу.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Машиностроение Хаор Челл</li>
+                            <li><strong>Вооружение:</strong> 4 бластерные пушки, 2 торпедные установки</li>
+                            <li><strong>Скорость:</strong> 1 200 км/ч</li>
+                            <li><strong>Особенности:</strong> Трансформация в шагоход</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tri-fighter -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/tri-fighter.png" alt="Tri-fighter">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Tri-fighter — дроид-истребитель</h3>
+                        <p>Три-дроид истребитель или просто три-истребитель — быстрый и манёвренный истребитель, использовавшийся КНС в массовых количествах. Вооружение составляли одна тяжёлая лазерная пушка, три лёгких и боевые ракеты, благодаря чему мог сражаться на равных с республиканскими истребителями ARC-170 и V-крылом.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Colla Designs / Phlac-Arphocc Automata</li>
+                            <li><strong>Вооружение:</strong> Тяжёлая лазерная пушка, 3 лёгких пушки, ракеты</li>
+                            <li><strong>Особенности:</strong> Высокая манёвренность</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hyena -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/hyena-class.png" alt="Hyena-class бомбардировщик">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Hyena-class — дроид-бомбардировщик</h3>
+                        <p>Дроид-бомбардировщик типа «Гиена» — модель дроидов-истребителей, основанная на идее дроидов с изменяемой геометрией. Были предназначены для массивных воздушных налётов на противника. Широко использовались силами КНС против войск Республики во время Войн клонов.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Оружейные Цеха Бактоид</li>
+                            <li><strong>Тип:</strong> Дроид-бомбардировщик</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Nantex -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/nantex-class.png" alt="Nantex-class истребитель">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Nantex-class — территориальный истребитель</h3>
+                        <p>Территориальный оборонительный истребитель класса Нантекс, также известный как «носо-крылый» истребитель или джеонозианский истребитель. Разработан исключительно для использования джеонозийцами для атмосферного и внутрисистемного перемещения, а также охраны своих территорий.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Хуппла Паза Тиск</li>
+                            <li><strong>Тип:</strong> Территориальный истребитель</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TF Bomber -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/tf-bomber.png" alt="Trade Federation bomber">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Trade Federation — дроид-бомбардировщик</h3>
+                        <p>Дроид-бомбардировщик Торговой Федерации был вооружен четырьмя лазерными пушками и бомбовым отсеком большой ёмкости. Несмотря на хорошую броню и экранирование, он был медленным и не обладал маневренностью. В большинстве случаев развертывался эскадрильями по пять человек.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Xi Char</li>
+                            <li><strong>Вооружение:</strong> 4 лазерные пушки, бомбовый отсек</li>
+                            <li><strong>Особенности:</strong> Хорошая броня, низкая маневренность</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HMP -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/hmp-gunship.png" alt="HMP дроид-канонерка">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">HMP — дроид-канонерка</h3>
+                        <p>Дроид-канонерка HMP (Heavy Missile Platform) — тяжёлый дроид-истребитель, выполнявший роль штурмовых и транспортных аппаратов КНС. Был оснащён ракетными установками и лазерными пушками, представляя серьёзную угрозу пехоте и наземной технике. Мог высаживать боевых дроидов B1 и супердроидов В2.</p>
+                        <ul>
+                            <li><strong>Вооружение:</strong> Спаренные лазерные пушки, тяжёлая пушка, ракетные установки</li>
+                            <li><strong>Особенности:</strong> Транспортировка дроидов</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sheathipede -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/sheathipede-class.png" alt="Sheathipede-class шаттл">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Sheathipede-class — транспортный шаттл</h3>
+                        <p>Транспортный шаттл класса Ножноногий, или широко известный как шаттл КНС, использовался для перевозки многих биологических лиц, таких как граф Дуку или Нут Ганрей. Имел когтистые посадочные лапы, которые могли приземляться только на твёрдые поверхности. Корабль ближнего радиуса действия, использовался для межпланетных путешествий.</p>
+                        <ul>
+                            <li><strong>Тип:</strong> Транспортный шаттл</li>
+                            <li><strong>Особенности:</strong> Когтистые посадочные лапы</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Quiver -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/quiver-class.png" alt="Quiver-class транспорт">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Quiver-class — транспортный шаттл «Колчан»</h3>
+                        <p>Транспортные шаттлы типа «Колчан» были атмосферно-орбитальными транспортами ближнего радиуса действия. Имел довольно развитый ИИ, поэтому зачастую летал на автопилоте. Перед приземлением выпускал изогнутые шасси, предназначенные только для посадок на твёрдой поверхности.</p>
+                        <ul>
+                            <li><strong>Вместимость:</strong> 6</li>
+                            <li><strong>Грузовместимость:</strong> 1 тонна</li>
+                            <li><strong>Автономность:</strong> 1 неделя</li>
+                            <li><strong>Особенности:</strong> Автопилот, развитый ИИ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- 3. КОСМИЧЕСКАЯ ТЕХНИКА КНС -->
+                <!-- ============================================================ -->
+                <h2 id="space" class="vehicles-section-title">Космическая техника</h2>
+
+                <!-- Hardcell -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/hardcell-class.png" alt="Hardcell-class транспорт">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Hardcell-class — межзвёздный транспорт</h3>
+                        <p>Межзвездный транспорт класса Hardcell — лёгкий капитальный транспорт, произведенный Техносоюзом. Цилиндрическое судно с титановым корпусом высотой чуть более 220 метров, оснащённое кластером из шести основных двигателей. Использовал ракетную тягу для атмосферных и звёздных путешествий.</p>
+                        <ul>
+                            <li><strong>Длина:</strong> 220+ м</li>
+                            <li><strong>Производитель:</strong> Техносоюз</li>
+                            <li><strong>Особенности:</strong> Ракетная тяга, вертикальная посадка</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- C-9979 -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/c-9979.png" alt="C-9979 десантный корабль">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">C-9979 — десантный корабль</h3>
+                        <p>Десантный корабль C-9979 — крупный звездолёт, предназначенный для доставки AAT, MTT и пехоты Торговой федерации на поверхность планеты. Был способен полностью разгрузиться менее чем за час. Оснащён мощной репульсорной подушкой для перевозки тяжёлых грузов.</p>
+                        <ul>
+                            <li><strong>Тип:</strong> Десантный корабль</li>
+                            <li><strong>Особенности:</strong> Быстрая разгрузка, мощная репульсорная подушка</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Recusant -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/recusant-class.png" alt="Recusant-class эсминец">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Recusant-class — лёгкий эсминец</h3>
+                        <p>Лёгкий эсминец класса «Рекусант» — военный корабль, произведенный Инженерным корпусом добровольцев Свободного Дака. Использовался Коммерческой гильдией, а позднее КНС. Часто использовался генералом Гривусом в качестве флагмана. Четыре-шесть таких кораблей могли превзойти по огневой мощи «Венатор».</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Инженерный корпус Свободного Дака</li>
+                            <li><strong>Тип:</strong> Лёгкий эсминец</li>
+                            <li><strong>Особенности:</strong> Мощное вооружение</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Munificent -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/munificent-class.png" alt="Munificent-class фрегат">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Munificent-class — фрегат</h3>
+                        <p>Фрегат типа «Щедрый» или фрегат Банковского клана — военный корабль, использовавшийся Межгалактическим банковским кланом и КНС. Был 825 метров в длину и имел особое строение, требующее небольшой экипаж для управления. Имел четыре сканера широкого диапазона и множество коммуникационных средств.</p>
+                        <ul>
+                            <li><strong>Длина:</strong> 825 м</li>
+                            <li><strong>Производитель:</strong> Межгалактический банковский клан</li>
+                            <li><strong>Особенности:</strong> Малый экипаж</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Providence -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/providence-class.png" alt="Providence-class разрушитель">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Providence-class — авианесущий разрушитель</h3>
+                        <p>Авианесущий разрушитель типа «Провидение» — корабль-носитель Торговой федерации и крупных кораблей КНС. Имел округлые очертания и псевдо-органическую эстетику. Корабли были массивными, цилиндрическими, 1088-метровыми судами с острым носом. Экипаж состоял из 600 дроидов.</p>
+                        <ul>
+                            <li><strong>Длина:</strong> 1 088 м</li>
+                            <li><strong>Экипаж:</strong> 600 дроидов</li>
+                            <li><strong>Особенности:</strong> Псевдо-органический дизайн</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sep Supply Ship -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/sep-supply-ship.png" alt="Separatist supply ship">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Separatist supply ship — корабль снабжения</h3>
+                        <p>Сепаратистский корабль снабжения — массивный транспортный корабль, использовавшийся КНС. Был шириной более тысячи метров и вмещал несколько ангаров для десантных кораблей C-9979. Был способен вмещать более пяти миллионов метрических тонн грузов. Управлялся боевыми дроидами B1.</p>
+                        <ul>
+                            <li><strong>Ширина:</strong> 1000+ м</li>
+                            <li><strong>Грузовместимость:</strong> 5 млн тонн</li>
+                            <li><strong>Особенности:</strong> Множество ангаров</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lucrehulk -->
+                <div class="vehicle-block">
+                    <div class="vehicle-image">
+                        <img src="../images/lucrehulk-class.png" alt="Lucrehulk-class линейный корабль">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Lucrehulk-class — линейный корабль</h3>
+                        <p>Линейный корабль типа «Барышник» — основной корабль Торговой федерации. Огромное судно, более трех километров в диаметре, напоминало плоский диск с центральной сферой. Диск был разомкнут спереди, открывая два гигантских посадочных дока. Не были предназначены для посадки на планеты.</p>
+                        <ul>
+                            <li><strong>Диаметр:</strong> 3000+ м</li>
+                            <li><strong>Тип:</strong> Линейный корабль</li>
+                            <li><strong>Особенности:</strong> Гигантские посадочные доки</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rebel-class -->
+                <div class="vehicle-block reverse">
+                    <div class="vehicle-image">
+                        <img src="../images/rebel-class.png" alt="Rebel-class лёгкий разрушитель">
+                    </div>
+                    <div class="vehicle-info">
+                        <h3 class="vehicle-title">Rebel-class — лёгкий разрушитель</h3>
+                        <p>Лёгкий разрушитель типа «Бунтарь» — сконструирован для борьбы с республиканскими «Венаторами» и дополнительной поддержки флота. Мостик размещён на киле, что свойственно сепаратистским кораблям. Основан на украденных куарренами технологиях мон-каламари. В основном производится на верфях Техносоюза.</p>
+                        <ul>
+                            <li><strong>Производитель:</strong> Верфи Техносоюза</li>
+                            <li><strong>Тип:</strong> Лёгкий разрушитель</li>
+                            <li><strong>Особенности:</strong> Мостик на киле, технологии мон-каламари</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-copy">© 2026 Sunrise of the Republic</div>
+    </footer>
+
+    <!-- ===== КНОПКА НАВЕРХ ===== -->
+    <button id="scrollTopBtn" title="Наверх">↑</button>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
