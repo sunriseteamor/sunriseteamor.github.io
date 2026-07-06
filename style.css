@@ -870,3 +870,144 @@ footer {
         font-size: 14px;
     }
 }
+/* ===== СТРАНИЦА ПРАВИЛА (ОБНОВЛЁННАЯ) ===== */
+
+.rules-page .page-container {
+    max-width: 1100px;
+    text-align: left;
+}
+
+.rules-page h1 {
+    text-align: center;
+}
+
+.rules-page .page-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rules-text {
+    margin-top: 20px;
+}
+
+.rules-section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4ebcff;
+    margin: 40px 0 25px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(46, 168, 255, 0.2);
+}
+
+.rules-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.rule-block {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.rule-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+.rule-block.note-block {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.06);
+}
+
+.rule-block.note-block:hover {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.1);
+}
+
+.rule-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 8px;
+}
+
+.rule-block p {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.rule-block p:last-child {
+    margin-bottom: 0;
+}
+
+.rule-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 8px 0;
+}
+
+.rule-block ul li {
+    color: #c8d2df;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 4px 0 4px 22px;
+    position: relative;
+}
+
+.rule-block ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.rule-block .sub-rule {
+    color: #b0c4de;
+    font-size: 14px;
+    padding: 2px 0 2px 16px;
+    position: relative;
+}
+
+.rule-block .sub-rule::before {
+    content: "—";
+    color: #4ebcff;
+    position: absolute;
+    left: 0;
+}
+
+.punishment {
+    color: #f0a060;
+    font-weight: 500;
+    margin-top: 6px;
+    padding: 6px 12px;
+    background: rgba(240, 160, 96, 0.06);
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Иерархия */
+.hierarchy-block {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px 35px;
+    margin-bottom: 25px;
+}
+
+.hierarchy-level {
+    margin-bottom: 20px;
+}
+
+.hierarchy-level:last-child {
+    margin-bottom: 0;
+}
+
+.hierarchy-level h4 {
+    font-size: 18px;
+    color: #4ebcff;
+    margin
