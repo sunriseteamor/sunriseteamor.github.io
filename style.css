@@ -2464,3 +2464,29 @@ body.scrolled .background::before {
 .secondary .ripple {
     background: rgba(46, 168, 255, 0.3);
 }
+/* Синхронизация — одинаковая анимация для фона и текста */
+.background,
+.hero h1,
+.page-container h1 {
+    animation: syncGradient 12s ease infinite;
+}
+
+@keyframes syncGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.background {
+    background: linear-gradient(270deg, #050b14, #0f1f3a, #12335c, #0f1f3a, #050b14);
+    background-size: 400% 400%;
+}
+
+.hero h1,
+.page-container h1 {
+    background: linear-gradient(270deg, #4ebcff, #a855f7, #4ebcff, #a855f7, #4ebcff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
