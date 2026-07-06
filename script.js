@@ -278,3 +278,124 @@ if (scrollBtn) {
         }, 200);
     });
 }
+// ============================================================
+// СЕТКА НА ФОНЕ (с точками и линиями)
+// ============================================================
+
+const canvas = document.getElementById('gridCanvas');
+const ctx = canvas.getContext('2d');
+
+let width, height;
+let dots = [];
+const dotSpacing = 60;
+const dotSize = 2;
+const lineOpacity = 0.15;
+
+function resizeCanvas() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    generateDots();
+}
+
+function generateDots() {
+    dots = [];
+    const cols = Math.ceil(width / dotSpacing) + 1;
+    const rows = Math.ceil(height / dotSpacing) + 1;
+    
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            dots.push({
+                x: col * dotSpacing + (row % 2) * (dotSpacing / 2),
+                y: row * dotSpacing * 0.866,
+                offsetX: (Math.random() - 0.5) * 10,
+                offsetY: (Math.random() - 0.5) * 10,
+                phase: Math.random() * Math.PI * 2
+            });
+        }
+    }
+}
+
+let time = 0;
+
+function drawGrid() {
+    ctx.clearRect(0, 0, width, height);
+    time += 0.003;
+    
+    const cols = Math.ceil(width / dotSpacing) + 1;
+    const rows = Math.ceil(height / dotSpacing) + 1;
+    
+    // Рисуем линии
+    ctx.strokeStyle = `rgba(78, 188, 255, ${lineOpacity})`;
+    ctx.lineWidth = 0.5;
+    
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            const index = row * cols + col;
+            if (index >= dots.length) continue;
+            
+            const dot = dots[index];
+            const x = dot.x + Math.sin(time + dot.phase) * 2;
+            const y = dot.y + Math.cos(time * 0.7 + dot.phase) * 2;
+            
+            // Соединяем с правым соседом
+            const rightIndex = index + 1;
+            if (rightIndex < dots.length && col < cols - 1) {
+                const rightDot = dots[rightIndex];
+                const rx = rightDot.x + Math.sin(time + rightDot.phase) * 2;
+                const ry = rightDot.y + Math.cos(time * 0.7 + rightDot.phase) * 2;
+                
+                const dist = Math.hypot(rx - x, ry - y);
+                if (dist < dotSpacing * 1.2) {
+                    ctx.beginPath();
+                    ctx.moveTo(x, y);
+                    ctx.lineTo(rx, ry);
+                    ctx.stroke();
+                }
+            }
+            
+            // Соединяем с нижним соседом
+            const downIndex = index + cols;
+            if (downIndex < dots.length) {
+                const downDot = dots[downIndex];
+                const dx = downDot.x + Math.sin(time + downDot.phase) * 2;
+                const dy = downDot.y + Math.cos(time * 0.7 + downDot.phase) * 2;
+                
+                const dist = Math.hypot(dx - x, dy - y);
+                if (dist < dotSpacing * 1.2) {
+                    ctx.beginPath();
+                    ctx.moveTo(x, y);
+                    ctx.lineTo(dx, dy);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+    
+    // Рисуем точки
+    dots.forEach((dot, index) => {
+        const x = dot.x + Math.sin(time + dot.phase) * 2;
+        const y = dot.y + Math.cos(time * 0.7 + dot.phase) * 2;
+        
+        // Точки на пересечениях
+        ctx.beginPath();
+        ctx.arc(x, y, dotSize, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(78, 188, 255, 0.5)`;
+        ctx.fill();
+        
+        // Свечение точек
+        const glow = ctx.createRadialGradient(x, y, 0, x, y, 12);
+        glow.addColorStop(0, `rgba(78, 188, 255, 0.08)`);
+        glow.addColorStop(1, `rgba(78, 188, 255, 0)`);
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(x, y, 12, 0, Math.PI * 2);
+        ctx.fill();
+    });
+    
+    requestAnimationFrame(drawGrid);
+}
+
+// Запуск
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+drawGrid();
