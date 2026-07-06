@@ -688,3 +688,169 @@ footer {
         font-size: 11px;
     }
 }
+/* ===== СТРАНИЦА ДОЛЖНОСТИ (ТЕКСТОВЫЙ ВАРИАНТ) ===== */
+
+.positions-page .page-container {
+    max-width: 1000px;
+    text-align: left;
+}
+
+.positions-page h1 {
+    text-align: center;
+}
+
+.positions-page .page-subtitle {
+    text-align: center;
+}
+
+.positions-text {
+    margin-top: 30px;
+}
+
+.positions-text h2 {
+    font-size: 32px;
+    margin: 50px 0 30px 0;
+    color: #4ebcff;
+    text-align: center;
+}
+
+.positions-text h2:first-of-type {
+    margin-top: 0;
+}
+
+.position-block {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.position-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+.position-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 12px;
+}
+
+.position-block p {
+    color: #c8d2df;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.position-block .note {
+    color: #f0c060;
+    font-size: 15px;
+    padding: 12px 16px;
+    background: rgba(240, 192, 96, 0.08);
+    border-radius: 8px;
+    border-left: 3px solid #f0c060;
+}
+
+.position-block .sub-title {
+    color: #4ebcff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.position-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 15px 0;
+}
+
+.position-block ul li {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 6px 0 6px 24px;
+    position: relative;
+}
+
+.position-block ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.position-block ul li strong {
+    color: #e0e8f0;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .position-block {
+        padding: 18px 16px;
+    }
+
+    .position-title {
+        font-size: 20px;
+    }
+
+    .position-block p {
+        font-size: 14px;
+    }
+
+    .positions-text h2 {
+        font-size: 26px;
+    }
+
+    .position-block ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px;
+    }
+
+    .position-block .note {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+
+    .position-block .sub-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .position-block {
+        padding: 14px 12px;
+    }
+
+    .position-title {
+        font-size: 17px;
+    }
+
+    .position-block p {
+        font-size: 13px;
+    }
+
+    .positions-text h2 {
+        font-size: 20px;
+        margin: 30px 0 20px 0;
+    }
+
+    .position-block ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 16px;
+    }
+
+    .position-block .note {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .position-block .sub-title {
+        font-size: 14px;
+    }
+}
