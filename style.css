@@ -2490,3 +2490,38 @@ body.scrolled .background::before {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+/* Принудительная центровка для заголовков */
+.hero-content h1,
+.page-container h1,
+.about h2,
+.features h2 {
+    display: block !important;
+    text-align: center !important;
+}
+
+/* Для родительских контейнеров */
+.hero-content,
+.page-container,
+.about,
+.features {
+    text-align: center;
+}
+
+/* Но для страниц с левым текстом — оставляем левое выравнивание */
+.formation-page .page-container,
+.rules-page .page-container,
+.charter-page .page-container,
+.extra-page .page-container,
+.positions-page .page-container {
+    text-align: left;
+}
+
+/* А заголовки внутри них — по центру */
+.formation-page .page-container h1,
+.rules-page .page-container h1,
+.charter-page .page-container h1,
+.extra-page .page-container h1,
+.positions-page .page-container h1 {
+    display: block !important;
+    text-align: center !important;
+}
