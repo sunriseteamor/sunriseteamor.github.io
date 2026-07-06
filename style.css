@@ -599,72 +599,6 @@ footer {
 }
 
 /* ===== АДАПТИВ ===== */
-
-@media (max-width: 700px) {
-    .page-content {
-        padding: 80px 20px 40px;
-        min-height: calc(100vh - 70px);
-    }
-
-    .page-container h1 {
-        font-size: 40px;
-    }
-
-    .page-subtitle {
-        font-size: 15px;
-        margin-bottom: 25px;
-    }
-
-    .contacts-grid {
-        gap: 14px;
-        max-width: 380px;
-    }
-
-    .contact-card {
-        padding: 16px 14px;
-        border-radius: 35px;
-    }
-
-    .contact-card h3 {
-        font-size: 15px;
-    }
-
-    .contact-card p {
-        font-size: 11px;
-    }
-
-    .contact-btn {
-        padding: 5px 14px;
-        font-size: 11px;
-    }
-}
-
-@media (max-width: 480px) {
-    .page-content {
-        padding: 70px 15px 30px;
-        min-height: calc(100vh - 60px);
-    }
-
-    .page-container h1 {
-        font-size: 30px;
-        margin-bottom: 4px;
-    }
-
-    .page-subtitle {
-        font-size: 13px;
-        margin-bottom: 18px;
-    }
-
-    .contacts-grid {
-        gap: 10px;
-        max-width: 300px;
-    }
-
-    .contact-card {
-        padding: 14px 10px;
-        border-radius: 25px;
-    }
-
     .contact-card h3 {
         font-size: 13px;
         margin-bottom: 2px;
@@ -1100,11 +1034,6 @@ footer {
         margin-bottom: 6px;
     }
 
-    .rules-section-title {
-        font-size: 18px;
-        margin: 25px 0 16px 0;
-    }
-
     .rule-block ul li {
         font-size: 12px;
         padding: 3px 0 3px 16px;
@@ -1135,11 +1064,6 @@ footer {
     }
 }
 /* ===== СТРАНИЦА УСТАВ ===== */
-
-.charter-page .page-container {
-    max-width: 1200px;
-    text-align: left;
-}
 
 .charter-page h1 {
     text-align: center;
@@ -1326,12 +1250,6 @@ footer {
         padding-bottom: 8px;
     }
 
-    .charter-block ul li {
-        font-size: 12px;
-        padding: 4px 0 4px 18px;
-        line-height: 1.6;
-    }
-
     .charter-block .note {
         font-size: 12px;
         padding: 8px 12px;
@@ -1356,23 +1274,6 @@ footer {
     left: 0;
     background: rgba(10, 18, 30, 0.95);
     min-width: 220px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.1);
-    overflow: hidden;
-    z-index: 999;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px 16px;
-    color: #d6d6d6;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.dropdown-content a:hover {
-    background: rgba(78,188,255,0.15);
-    color: #4ebcff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -1410,14 +1311,6 @@ footer {
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-.menu .dropdown .dropdown-content a {
-    display: block;
-    padding: 10px 18px;
-    color: #d6d6d6;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 14px;
-}
 
 .menu .dropdown .dropdown-content a:hover {
     background: rgba(78,188,255,0.15);
@@ -1596,32 +1489,6 @@ footer {
         padding: 10px 14px;
     }
 }
-
-@media (max-width: 480px) {
-    .formation-page h1 {
-        font-size: 26px;
-    }
-
-    .formation-page .page-subtitle {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-
-    .formation-block {
-        padding: 16px 16px;
-        margin-bottom: 16px;
-    }
-
-    .formation-title {
-        font-size: 15px;
-        margin-bottom: 6px;
-    }
-
-    .formation-subtitle {
-        font-size: 14px;
-        margin-bottom: 4px;
-    }
-
     .formation-block p {
         font-size: 13px;
         line-height: 1.7;
@@ -1645,6 +1512,7 @@ footer {
         padding: 8px 12px;
     }
 }
+
 /* ===== СТРАНИЦЫ РАЗДЕЛА "ДОПОЛНИТЕЛЬНО" (как в уставе) ===== */
 
 .extra-page .page-container {
@@ -1866,45 +1734,6 @@ footer {
 /* ============================================================
    НОВЫЕ ФИЧИ: Кнопка Наверх + Частицы + Параллакс + Неон
    ============================================================ */
-
-/* ===== 1. КНОПКА НАВЕРХ ===== */
-
-#scrollTopBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(46, 168, 255, 0.85);
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 20px rgba(46, 168, 255, 0.4);
-    backdrop-filter: blur(10px);
-}
-
-#scrollTopBtn.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#scrollTopBtn:hover {
-    transform: translateY(-5px) scale(1.1);
-    background: #2ea8ff;
-    box-shadow: 0 8px 35px rgba(46, 168, 255, 0.6);
-}
-
-#scrollTopBtn:active {
-    transform: scale(0.9);
-}
-
-
 /* ===== 2. ЧАСТИЦЫ ===== */
 
 #particles-js {
@@ -2065,74 +1894,6 @@ footer {
 @keyframes glowPulse {
     0% { opacity: 0.5; }
     100% { opacity: 1; }
-}
-
-
-/* ===== 2. ЧАСТИЦЫ ===== */
-
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
-
-
-/* ===== 3. СВОЙ КУРСОР ===== */
-
-body, button, a, input, textarea {
-    cursor: none;
-}
-
-#custom-cursor {
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    background: radial-gradient(circle at center, rgba(78, 188, 255, 0.6), rgba(46, 168, 255, 0.2));
-    border: 2px solid rgba(78, 188, 255, 0.8);
-    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3),
-                0 0 60px rgba(46, 168, 255, 0.1);
-    transition: width 0.15s ease, height 0.15s ease, background 0.15s ease;
-    transform: translate(-50%, -50%);
-    animation: cursorColorShift 3s ease-in-out infinite;
-}
-
-@keyframes cursorColorShift {
-    0% { border-color: rgba(46, 168, 255, 0.8); box-shadow: 0 0 30px rgba(46, 168, 255, 0.3); }
-    33% { border-color: rgba(100, 100, 255, 0.8); box-shadow: 0 0 30px rgba(100, 100, 255, 0.3); }
-    66% { border-color: rgba(46, 255, 200, 0.8); box-shadow: 0 0 30px rgba(46, 255, 200, 0.3); }
-    100% { border-color: rgba(46, 168, 255, 0.8); box-shadow: 0 0 30px rgba(46, 168, 255, 0.3); }
-}
-
-#custom-cursor::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: white;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-#custom-cursor.hover {
-    width: 40px;
-    height: 40px;
-    background: radial-gradient(circle at center, rgba(78, 188, 255, 0.4), rgba(46, 168, 255, 0.1));
-    border-width: 2px;
-}
-
-#custom-cursor.hover::after {
-    width: 6px;
-    height: 6px;
 }
 
 
@@ -2411,4 +2172,698 @@ footer {
         bottom: 15px;
         right: 15px;
     }
+}
+/* ===== ГРАДИЕНТНЫЙ ТЕКСТ ДЛЯ ЗАГОЛОВКОВ ===== */
+
+/* Главный заголовок на hero */
+.hero h1 {
+    background: linear-gradient(90deg, #4ebcff, #a855f7, #4ebcff, #4ebcff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 5s ease infinite;
+    display: inline-block;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Заголовки страниц */
+.page-container h1,
+.extra-page h1,
+.formation-page h1,
+.rules-page h1,
+.charter-page h1,
+.positions-page h1 {
+    background: linear-gradient(90deg, #4ebcff, #a855f7, #4ebcff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 5s ease infinite;
+    display: inline-block;
+}
+
+/* Заголовки секций (для разнообразия) */
+.about h2,
+.features h2,
+.rules-section-title,
+.charter-section-title,
+.formation-section-title,
+.extra-section-title,
+.positions-text h2 {
+    background: linear-gradient(90deg, #4ebcff, #60a5fa, #4ebcff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 6s ease infinite;
+    display: inline-block;
+}
+
+/* Для заголовков в карточках */
+.card h3,
+.contact-card h3,
+.position-card h3 {
+    background: linear-gradient(90deg, #4ebcff, #818cf8, #4ebcff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 4s ease infinite;
+    display: inline-block;
+}
+/* ===== СМЕНА ФОНА ПРИ СКРОЛЛЕ ===== */
+
+/* Анимированный фон с переливом */
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(270deg, #050b14, #0f1f3a, #12335c, #0f1f3a, #050b14);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+    transition: opacity 0.8s ease;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Дополнительное свечение при скролле */
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(46, 168, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(78, 188, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(0, 100, 200, 0.03) 0%, transparent 60%);
+    animation: glowPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Смена тона при скролле (эффект) */
+body.scrolled .background::before {
+    background: radial-gradient(circle at 30% 40%, rgba(100, 100, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(46, 255, 200, 0.05) 0%, transparent 40%);
+    transition: background 1s ease;
+}
+/* ===== RIPPLE-ЭФФЕКТ НА КНОПКАХ ===== */
+
+.ripple-btn {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: rippleAnimation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleAnimation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Для кнопок .primary и .secondary */
+.primary,
+.secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.primary .ripple {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.secondary .ripple {
+    background: rgba(46, 168, 255, 0.3);
+}
+/* Синхронизация — одинаковая анимация для фона и текста */
+.background,
+.hero h1,
+.page-container h1 {
+    animation: syncGradient 12s ease infinite;
+}
+
+@keyframes syncGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.background {
+    background: linear-gradient(270deg, #050b14, #0f1f3a, #12335c, #0f1f3a, #050b14);
+    background-size: 400% 400%;
+}
+
+.hero h1,
+.page-container h1 {
+    background: linear-gradient(270deg, #4ebcff, #a855f7, #4ebcff, #a855f7, #4ebcff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+/* Принудительная центровка для заголовков */
+.hero-content h1,
+.page-container h1,
+.about h2,
+.features h2 {
+    display: block !important;
+    text-align: center !important;
+}
+
+/* Для родительских контейнеров */
+.hero-content,
+.page-container,
+.about,
+.features {
+    text-align: center;
+}
+
+/* Но для страниц с левым текстом — оставляем левое выравнивание */
+.formation-page .page-container,
+.rules-page .page-container,
+.charter-page .page-container,
+.extra-page .page-container,
+.positions-page .page-container {
+    text-align: left;
+}
+
+/* А заголовки внутри них — по центру */
+.formation-page .page-container h1,
+.rules-page .page-container h1,
+.charter-page .page-container h1,
+.extra-page .page-container h1,
+.positions-page .page-container h1 {
+    display: block !important;
+    text-align: center !important;
+}
+/* ===== СТРАНИЦА ВООРУЖЕНИЕ ===== */
+
+.weapons-page .page-container {
+    max-width: 1200px;
+    text-align: left;
+}
+
+.weapons-page h1 {
+    text-align: center;
+}
+
+.weapons-page .page-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.weapons-text {
+    margin-top: 20px;
+}
+
+/* Блок оружия (текст + картинка) */
+.weapon-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 16px;
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.weapon-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+/* Картинка */
+.weapon-image {
+    flex: 0 0 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.image-placeholder {
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.image-placeholder span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 400;
+}
+
+.weapon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Текст */
+.weapon-info {
+    flex: 1;
+}
+
+.weapon-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 12px;
+}
+
+.weapon-info p {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.weapon-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.weapon-info ul li {
+    color: #c8d2df;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 4px 0 4px 22px;
+    position: relative;
+}
+
+.weapon-info ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.weapon-info ul li strong {
+    color: #e0e8f0;
+}
+
+/* Обратный порядок (картинка справа) */
+.weapon-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .weapon-block {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .weapon-block.reverse {
+        flex-direction: column;
+    }
+
+    .weapon-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+    }
+
+    .weapon-title {
+        font-size: 20px;
+    }
+
+    .weapon-info p {
+        font-size: 14px;
+    }
+
+    .weapon-info ul li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weapon-block {
+        padding: 16px;
+    }
+
+    .weapon-image {
+        height: 150px;
+        max-width: 200px;
+    }
+
+    .weapon-title {
+        font-size: 18px;
+    }
+
+    .weapon-info p {
+        font-size: 13px;
+    }
+
+    .weapon-info ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 18px;
+    }
+}
+/* ===== СТРАНИЦА ВООРУЖЕНИЕ ===== */
+
+.weapons-page .page-container {
+    max-width: 1300px;
+    text-align: left;
+}
+
+.weapons-page h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.weapons-page .page-subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: #c7d5e5;
+}
+
+.weapons-text {
+    margin-top: 20px;
+}
+
+/* Блок оружия (текст + картинка) */
+.weapon-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 16px;
+    padding: 35px 40px;
+    margin-bottom: 35px;
+    transition: 0.3s;
+}
+
+.weapon-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+/* Картинка */
+.weapon-image {
+    flex: 0 0 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.weapon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Сетка для 3 картинок DC-17m */
+.weapon-images-grid {
+    flex: 0 0 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.weapon-image-sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.weapon-image-sub:hover {
+    border-color: #2ea8ff;
+    background: rgba(46, 168, 255, 0.05);
+}
+
+.weapon-image-sub img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+
+.image-label {
+    font-size: 11px;
+    color: #888;
+    margin-top: 6px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Текст */
+.weapon-info {
+    flex: 1;
+}
+
+.weapon-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 14px;
+}
+
+.weapon-info p {
+    color: #c8d2df;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.weapon-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.weapon-info ul li {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 6px 0 6px 26px;
+    position: relative;
+}
+
+.weapon-info ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.weapon-info ul li strong {
+    color: #e0e8f0;
+}
+
+/* Обратный порядок */
+.weapon-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 992px) {
+    .weapon-block {
+        gap: 30px;
+        padding: 28px 30px;
+    }
+
+    .weapon-image {
+        flex: 0 0 200px;
+        height: 200px;
+    }
+
+    .weapon-images-grid {
+        flex: 0 0 240px;
+    }
+
+    .weapon-image-sub img {
+        height: 90px;
+    }
+
+    .weapon-title {
+        font-size: 22px;
+    }
+
+    .weapon-info p {
+        font-size: 15px;
+    }
+
+    .weapon-info ul li {
+        font-size: 14px;
+        padding: 5px 0 5px 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .weapon-block {
+        flex-direction: column;
+        padding: 24px 22px;
+        gap: 24px;
+        margin-bottom: 25px;
+    }
+
+    .weapon-block.reverse {
+        flex-direction: column;
+    }
+
+    .weapon-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 280px;
+        height: 200px;
+    }
+
+    .weapon-images-grid {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .weapon-image-sub img {
+        height: 80px;
+    }
+
+    .weapons-page h1 {
+        font-size: 34px;
+    }
+
+    .weapons-page .page-subtitle {
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+
+    .weapon-title {
+        font-size: 20px;
+    }
+
+    .weapon-info p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .weapon-info ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px;
+        line-height: 1.6;
+    }
+
+    .image-label {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weapon-block {
+        padding: 18px 16px;
+        gap: 18px;
+        margin-bottom: 18px;
+    }
+
+    .weapon-image {
+        max-width: 200px;
+        height: 160px;
+    }
+
+    .weapon-images-grid {
+        max-width: 300px;
+        gap: 8px;
+    }
+
+    .weapon-image-sub {
+        padding: 6px;
+    }
+
+    .weapon-image-sub img {
+        height: 60px;
+    }
+
+    .weapons-page h1 {
+        font-size: 26px;
+    }
+
+    .weapons-page .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .weapon-title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .weapon-info p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .weapon-info ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 18px;
+        line-height: 1.5;
+    }
+
+    .image-label {
+        font-size: 9px;
+        margin-top: 4px;
+    }
+}
+/* ===== СЕТКА НА ФОНЕ (CANVAS) ===== */
+
+#gridCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5; /* попробуй увеличить до 0.8, чтобы увидеть */
 }
