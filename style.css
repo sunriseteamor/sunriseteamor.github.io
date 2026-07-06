@@ -3113,3 +3113,129 @@ body.scrolled .background::before {
         font-size: 12px;
     }
 }
+/* ===== КОНТАКТЫ — НОВАЯ СЕТКА ===== */
+
+.contacts-grid-new {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Telegram — сверху, занимает 2 колонки */
+.contact-card-top {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 60px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.contact-card-top:hover {
+    transform: translateY(-8px);
+    border-color: #2ea8ff;
+    box-shadow: 0 15px 40px rgba(46, 168, 255, 0.25);
+}
+
+.contact-card-top h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.contact-card-top p {
+    color: #bcc8d6;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Discord и ВКонтакте — снизу */
+.contact-card-bottom {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 60px;
+    padding: 24px 18px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.contact-card-bottom:hover {
+    transform: translateY(-8px);
+    border-color: #2ea8ff;
+    box-shadow: 0 15px 40px rgba(46, 168, 255, 0.25);
+}
+
+.contact-card-bottom h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.contact-card-bottom p {
+    color: #bcc8d6;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.contact-card-bottom .contact-btn,
+.contact-card-top .contact-btn {
+    display: inline-block;
+    background: rgba(46, 168, 255, 0.15);
+    color: #4ebcff;
+    padding: 8px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+    border: 1px solid rgba(46, 168, 255, 0.2);
+}
+
+.contact-card-bottom .contact-btn:hover,
+.contact-card-top .contact-btn:hover {
+    background: #2ea8ff;
+    color: white;
+    box-shadow: 0 10px 30px rgba(46, 168, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 600px) {
+    .contacts-grid-new {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        gap: 14px;
+    }
+
+    .contact-card-top {
+        border-radius: 40px;
+        padding: 22px 16px;
+    }
+
+    .contact-card-top h3 {
+        font-size: 19px;
+    }
+
+    .contact-card-bottom {
+        border-radius: 40px;
+        padding: 18px 14px;
+    }
+
+    .contact-card-bottom h3 {
+        font-size: 16px;
+    }
+
+    .contact-card-bottom p {
+        font-size: 12px;
+    }
+
+    .contact-card-bottom .contact-btn,
+    .contact-card-top .contact-btn {
+        font-size: 12px;
+        padding: 6px 18px;
+    }
+}
