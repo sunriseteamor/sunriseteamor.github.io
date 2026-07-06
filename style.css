@@ -1134,3 +1134,197 @@ footer {
         padding: 3px 0;
     }
 }
+/* ===== СТРАНИЦА УСТАВ ===== */
+
+.charter-page .page-container {
+    max-width: 1200px;
+    text-align: left;
+}
+
+.charter-page h1 {
+    text-align: center;
+}
+
+.charter-page .page-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.charter-text {
+    margin-top: 20px;
+}
+
+.charter-section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4ebcff;
+    margin: 45px 0 28px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(46, 168, 255, 0.2);
+}
+
+.charter-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.charter-block {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 12px;
+    padding: 22px 30px;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+
+.charter-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+.charter-block.note-block {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.06);
+}
+
+.charter-block.note-block:hover {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.1);
+}
+
+.charter-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 10px;
+}
+
+.charter-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4ebcff;
+    margin-bottom: 8px;
+}
+
+.charter-number {
+    color: #2ea8ff;
+    font-weight: 700;
+}
+
+.charter-block p {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.charter-block p:last-child {
+    margin-bottom: 0;
+}
+
+.charter-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 8px 0;
+}
+
+.charter-block ul li {
+    color: #c8d2df;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 5px 0 5px 24px;
+    position: relative;
+}
+
+.charter-block ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.charter-block .note {
+    color: #f0c060;
+    font-size: 14px;
+    padding: 10px 14px;
+    background: rgba(240, 192, 96, 0.06);
+    border-radius: 6px;
+    border-left: 3px solid #f0c060;
+    margin-top: 6px;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .charter-page .page-container {
+        max-width: 100%;
+    }
+
+    .charter-block {
+        padding: 18px 20px;
+        margin-bottom: 18px;
+    }
+
+    .charter-title {
+        font-size: 17px;
+    }
+
+    .charter-subtitle {
+        font-size: 16px;
+    }
+
+    .charter-block p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .charter-section-title {
+        font-size: 22px;
+        margin: 35px 0 22px 0;
+    }
+
+    .charter-block ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px;
+    }
+
+    .charter-block .note {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .charter-block {
+        padding: 14px 14px;
+        margin-bottom: 14px;
+    }
+
+    .charter-title {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .charter-subtitle {
+        font-size: 14px;
+    }
+
+    .charter-block p {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .charter-section-title {
+        font-size: 18px;
+        margin: 25px 0 16px 0;
+    }
+
+    .charter-block ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 16px;
+    }
+
+    .charter-block .note {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
