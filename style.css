@@ -376,3 +376,124 @@ footer {
     animation: fadeInUp 1s ease 0.6s forwards;
     opacity: 0;
 }
+/* ===== СТРАНИЦА КОНТАКТЫ ===== */
+
+.page-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 30px 80px;
+}
+
+.page-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.page-container h1 {
+    font-size: 64px;
+    margin-bottom: 15px;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    color: #c7d5e5;
+    margin-bottom: 60px;
+}
+
+/* Сетка контактов */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* Карточка контакта */
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    padding: 40px 30px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: #2ea8ff;
+    box-shadow: 0 20px 50px rgba(46, 168, 255, 0.25);
+}
+
+.contact-icon {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #bcc8d6;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: rgba(46, 168, 255, 0.15);
+    color: #4ebcff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+    border: 1px solid rgba(46, 168, 255, 0.2);
+}
+
+.contact-btn:hover {
+    background: #2ea8ff;
+    color: white;
+    box-shadow: 0 10px 30px rgba(46, 168, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 900px) {
+    .page-container h1 {
+        font-size: 44px;
+    }
+
+    .page-subtitle {
+        font-size: 17px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-container h1 {
+        font-size: 32px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-icon {
+        font-size: 40px;
+    }
+}
