@@ -1427,3 +1427,221 @@ footer {
 .menu .dropdown:hover .dropdown-content {
     display: block;
 }
+/* ===== СТРАНИЦЫ ФОРМИРОВАНИЙ ===== */
+
+.formation-page .page-container {
+    max-width: 1200px;
+    text-align: left;
+}
+
+.formation-page h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.formation-page .page-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #c7d5e5;
+}
+
+.formation-text {
+    margin-top: 20px;
+}
+
+.formation-section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4ebcff;
+    margin: 50px 0 30px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(46, 168, 255, 0.2);
+}
+
+.formation-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.formation-block {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 12px;
+    padding: 26px 35px;
+    margin-bottom: 28px;
+    transition: 0.3s;
+}
+
+.formation-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+.formation-block.note-block {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.06);
+}
+
+.formation-block.note-block:hover {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.1);
+}
+
+.formation-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 10px;
+}
+
+.formation-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4ebcff;
+    margin-bottom: 8px;
+}
+
+.formation-block p {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.formation-block p:last-child {
+    margin-bottom: 0;
+}
+
+.formation-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 10px 0;
+}
+
+.formation-block ul li {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.9;
+    padding: 7px 0 7px 28px;
+    position: relative;
+}
+
+.formation-block ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.formation-block ul li strong {
+    color: #e0e8f0;
+}
+
+.formation-block .note {
+    color: #f0c060;
+    font-size: 14px;
+    padding: 12px 16px;
+    background: rgba(240, 192, 96, 0.06);
+    border-radius: 6px;
+    border-left: 3px solid #f0c060;
+    margin-top: 8px;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .formation-page .page-container {
+        max-width: 100%;
+    }
+
+    .formation-page h1 {
+        font-size: 34px;
+    }
+
+    .formation-page .page-subtitle {
+        font-size: 17px;
+    }
+
+    .formation-block {
+        padding: 20px 22px;
+        margin-bottom: 20px;
+    }
+
+    .formation-title {
+        font-size: 17px;
+    }
+
+    .formation-subtitle {
+        font-size: 16px;
+    }
+
+    .formation-block p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .formation-section-title {
+        font-size: 22px;
+        margin: 40px 0 22px 0;
+    }
+
+    .formation-block ul li {
+        font-size: 13px;
+        padding: 5px 0 5px 22px;
+        line-height: 1.7;
+    }
+
+    .formation-block .note {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formation-page h1 {
+        font-size: 26px;
+    }
+
+    .formation-page .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .formation-block {
+        padding: 16px 16px;
+        margin-bottom: 16px;
+    }
+
+    .formation-title {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .formation-subtitle {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .formation-block p {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    .formation-section-title {
+        font-size: 18px;
+        margin: 30px 0 16px 0;
+        padding-bottom: 6px;
+    }
+
+    .formation-block ul li {
+        font-size: 12px;
+        padding: 4px 0 4px 18px;
+        line-height: 1.6;
+    }
+
+    .formation-block .note {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
