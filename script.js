@@ -163,39 +163,6 @@ if (typeof particlesJS !== 'undefined') {
 
 
 // ============================================================
-// СВОЙ КУРСОР
-// ============================================================
-
-const cursor = document.getElementById('custom-cursor');
-
-if (cursor) {
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    const hoverElements = document.querySelectorAll('a, button, .card, .primary, .secondary, .menu a, .logo');
-
-    hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.classList.add('hover');
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hover');
-        });
-    });
-
-    document.addEventListener('mouseleave', () => {
-        cursor.style.opacity = '0';
-    });
-
-    document.addEventListener('mouseenter', () => {
-        cursor.style.opacity = '1';
-    });
-}
-
-
-// ============================================================
 // ПАРАЛЛАКС
 // ============================================================
 
