@@ -2042,61 +2042,6 @@ footer {
 }
 
 
-/* ===== 3. СВОЙ КУРСОР ===== */
-
-body, button, a, input, textarea {
-    cursor: none;
-}
-
-#custom-cursor {
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    background: radial-gradient(circle at center, rgba(78, 188, 255, 0.6), rgba(46, 168, 255, 0.2));
-    border: 2px solid rgba(78, 188, 255, 0.8);
-    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3),
-                0 0 60px rgba(46, 168, 255, 0.1);
-    transition: width 0.15s ease, height 0.15s ease, background 0.15s ease;
-    transform: translate(-50%, -50%);
-    animation: cursorColorShift 3s ease-in-out infinite;
-}
-
-@keyframes cursorColorShift {
-    0% { border-color: rgba(46, 168, 255, 0.8); box-shadow: 0 0 30px rgba(46, 168, 255, 0.3); }
-    33% { border-color: rgba(100, 100, 255, 0.8); box-shadow: 0 0 30px rgba(100, 100, 255, 0.3); }
-    66% { border-color: rgba(46, 255, 200, 0.8); box-shadow: 0 0 30px rgba(46, 255, 200, 0.3); }
-    100% { border-color: rgba(46, 168, 255, 0.8); box-shadow: 0 0 30px rgba(46, 168, 255, 0.3); }
-}
-
-#custom-cursor::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: white;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-#custom-cursor.hover {
-    width: 40px;
-    height: 40px;
-    background: radial-gradient(circle at center, rgba(78, 188, 255, 0.4), rgba(46, 168, 255, 0.1));
-    border-width: 2px;
-}
-
-#custom-cursor.hover::after {
-    width: 6px;
-    height: 6px;
-}
-
-
 /* ===== 4. СТЕКЛЯННЫЙ ЭФФЕКТ (GLASSMORPHISM) ===== */
 
 .glass {
