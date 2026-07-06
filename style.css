@@ -2865,5 +2865,5 @@ body.scrolled .background::before {
     height: 100%;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.5; /* попробуй увеличить до 0.8, чтобы увидеть */
 }
