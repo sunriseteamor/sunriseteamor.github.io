@@ -1338,3 +1338,19 @@ footer {
         line-height: 1.5;
     }
 }
+/* ===== НЕРАБОЧИЕ ССЫЛКИ В МЕНЮ ===== */
+
+.menu .dropdown .dropbtn {
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Чтобы ссылка не меняла цвет при наведении */
+.menu .dropdown .dropbtn:hover {
+    color: #d6d6d6;
+}
+
+/* Но выпадающий список должен работать */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
