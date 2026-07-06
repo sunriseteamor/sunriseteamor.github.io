@@ -1645,3 +1645,221 @@ footer {
         padding: 8px 12px;
     }
 }
+/* ===== СТРАНИЦЫ РАЗДЕЛА "ДОПОЛНИТЕЛЬНО" (как в уставе) ===== */
+
+.extra-page .page-container {
+    max-width: 1200px;
+    text-align: left;
+}
+
+.extra-page h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.extra-page .page-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #c7d5e5;
+}
+
+.extra-text {
+    margin-top: 20px;
+}
+
+.extra-section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4ebcff;
+    margin: 50px 0 30px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(46, 168, 255, 0.2);
+}
+
+.extra-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.extra-block {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 12px;
+    padding: 26px 35px;
+    margin-bottom: 28px;
+    transition: 0.3s;
+}
+
+.extra-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+.extra-block.note-block {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.06);
+}
+
+.extra-block.note-block:hover {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.1);
+}
+
+.extra-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 10px;
+}
+
+.extra-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4ebcff;
+    margin-bottom: 8px;
+}
+
+.extra-block p {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.extra-block p:last-child {
+    margin-bottom: 0;
+}
+
+.extra-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 10px 0;
+}
+
+.extra-block ul li {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.9;
+    padding: 7px 0 7px 28px;
+    position: relative;
+}
+
+.extra-block ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.extra-block ul li strong {
+    color: #e0e8f0;
+}
+
+.extra-block .note {
+    color: #f0c060;
+    font-size: 14px;
+    padding: 12px 16px;
+    background: rgba(240, 192, 96, 0.06);
+    border-radius: 6px;
+    border-left: 3px solid #f0c060;
+    margin-top: 8px;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .extra-page .page-container {
+        max-width: 100%;
+    }
+
+    .extra-page h1 {
+        font-size: 34px;
+    }
+
+    .extra-page .page-subtitle {
+        font-size: 17px;
+    }
+
+    .extra-block {
+        padding: 20px 22px;
+        margin-bottom: 20px;
+    }
+
+    .extra-title {
+        font-size: 17px;
+    }
+
+    .extra-subtitle {
+        font-size: 16px;
+    }
+
+    .extra-block p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .extra-section-title {
+        font-size: 22px;
+        margin: 40px 0 22px 0;
+    }
+
+    .extra-block ul li {
+        font-size: 13px;
+        padding: 5px 0 5px 22px;
+        line-height: 1.7;
+    }
+
+    .extra-block .note {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .extra-page h1 {
+        font-size: 26px;
+    }
+
+    .extra-page .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .extra-block {
+        padding: 16px 16px;
+        margin-bottom: 16px;
+    }
+
+    .extra-title {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .extra-subtitle {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .extra-block p {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    .extra-section-title {
+        font-size: 18px;
+        margin: 30px 0 16px 0;
+        padding-bottom: 6px;
+    }
+
+    .extra-block ul li {
+        font-size: 12px;
+        padding: 4px 0 4px 18px;
+        line-height: 1.6;
+    }
+
+    .extra-block .note {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
