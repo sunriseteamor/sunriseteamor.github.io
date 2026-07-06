@@ -599,72 +599,6 @@ footer {
 }
 
 /* ===== АДАПТИВ ===== */
-
-@media (max-width: 700px) {
-    .page-content {
-        padding: 80px 20px 40px;
-        min-height: calc(100vh - 70px);
-    }
-
-    .page-container h1 {
-        font-size: 40px;
-    }
-
-    .page-subtitle {
-        font-size: 15px;
-        margin-bottom: 25px;
-    }
-
-    .contacts-grid {
-        gap: 14px;
-        max-width: 380px;
-    }
-
-    .contact-card {
-        padding: 16px 14px;
-        border-radius: 35px;
-    }
-
-    .contact-card h3 {
-        font-size: 15px;
-    }
-
-    .contact-card p {
-        font-size: 11px;
-    }
-
-    .contact-btn {
-        padding: 5px 14px;
-        font-size: 11px;
-    }
-}
-
-@media (max-width: 480px) {
-    .page-content {
-        padding: 70px 15px 30px;
-        min-height: calc(100vh - 60px);
-    }
-
-    .page-container h1 {
-        font-size: 30px;
-        margin-bottom: 4px;
-    }
-
-    .page-subtitle {
-        font-size: 13px;
-        margin-bottom: 18px;
-    }
-
-    .contacts-grid {
-        gap: 10px;
-        max-width: 300px;
-    }
-
-    .contact-card {
-        padding: 14px 10px;
-        border-radius: 25px;
-    }
-
     .contact-card h3 {
         font-size: 13px;
         margin-bottom: 2px;
@@ -1100,11 +1034,6 @@ footer {
         margin-bottom: 6px;
     }
 
-    .rules-section-title {
-        font-size: 18px;
-        margin: 25px 0 16px 0;
-    }
-
     .rule-block ul li {
         font-size: 12px;
         padding: 3px 0 3px 16px;
@@ -1135,11 +1064,6 @@ footer {
     }
 }
 /* ===== СТРАНИЦА УСТАВ ===== */
-
-.charter-page .page-container {
-    max-width: 1200px;
-    text-align: left;
-}
 
 .charter-page h1 {
     text-align: center;
@@ -1326,12 +1250,6 @@ footer {
         padding-bottom: 8px;
     }
 
-    .charter-block ul li {
-        font-size: 12px;
-        padding: 4px 0 4px 18px;
-        line-height: 1.6;
-    }
-
     .charter-block .note {
         font-size: 12px;
         padding: 8px 12px;
@@ -1356,23 +1274,6 @@ footer {
     left: 0;
     background: rgba(10, 18, 30, 0.95);
     min-width: 220px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.1);
-    overflow: hidden;
-    z-index: 999;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px 16px;
-    color: #d6d6d6;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.dropdown-content a:hover {
-    background: rgba(78,188,255,0.15);
-    color: #4ebcff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -1410,14 +1311,6 @@ footer {
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-.menu .dropdown .dropdown-content a {
-    display: block;
-    padding: 10px 18px;
-    color: #d6d6d6;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 14px;
-}
 
 .menu .dropdown .dropdown-content a:hover {
     background: rgba(78,188,255,0.15);
@@ -1596,32 +1489,6 @@ footer {
         padding: 10px 14px;
     }
 }
-
-@media (max-width: 480px) {
-    .formation-page h1 {
-        font-size: 26px;
-    }
-
-    .formation-page .page-subtitle {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-
-    .formation-block {
-        padding: 16px 16px;
-        margin-bottom: 16px;
-    }
-
-    .formation-title {
-        font-size: 15px;
-        margin-bottom: 6px;
-    }
-
-    .formation-subtitle {
-        font-size: 14px;
-        margin-bottom: 4px;
-    }
-
     .formation-block p {
         font-size: 13px;
         line-height: 1.7;
@@ -2026,19 +1893,6 @@ footer {
 @keyframes glowPulse {
     0% { opacity: 0.5; }
     100% { opacity: 1; }
-}
-
-
-/* ===== 2. ЧАСТИЦЫ ===== */
-
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
 }
 
 
