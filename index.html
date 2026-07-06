@@ -14,50 +14,56 @@
     
     <!-- ===== АНИМАЦИИ ===== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- ===== БИБЛИОТЕКА ДЛЯ ЧАСТИЦ ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
 
     <div class="background"></div>
 
+    <!-- ===== ЧАСТИЦЫ ===== -->
+    <div id="particles-js"></div>
+
     <header>
         <nav class="navbar">
             <a href="index.html" class="logo">Sunrise of the Republic</a>
 
             <div class="menu">
-    <a href="pages/charter.html">Устав</a>
-    <a href="pages/rules.html">Правила</a>
-    <a href="pages/positions.html">Должности</a>
+                <a href="pages/charter.html">Устав</a>
+                <a href="pages/rules.html">Правила</a>
+                <a href="pages/positions.html">Должности</a>
 
-   <div class="dropdown">
-    <span class="dropbtn">Формирование ▾</span>
-    <div class="dropdown-content">
-        <a href="pages/rsb.html">РСБ</a>
-        <a href="pages/4th-fleet.html">4-й Флот</a>
-        <a href="pages/17th.html">17-й Гвардейский Батальон</a>
-        <a href="pages/regular.html">Регулярные Формирования</a>
-        <a href="pages/bso.html">БСО</a>
-        <a href="pages/ark.html">ARK</a>
-        <a href="pages/arf.html">ARF</a>
-    </div>
-</div>
+                <div class="dropdown">
+                    <span class="dropbtn">Формирование ▾</span>
+                    <div class="dropdown-content">
+                        <a href="pages/rsb.html">РСБ</a>
+                        <a href="pages/4th-fleet.html">4-й Флот</a>
+                        <a href="pages/17th.html">17-й Гвардейский Батальон</a>
+                        <a href="pages/regular.html">Регулярные Формирования</a>
+                        <a href="pages/bso.html">БСО</a>
+                        <a href="pages/ark.html">ARK</a>
+                        <a href="pages/arf.html">ARF</a>
+                    </div>
+                </div>
 
-    <div class="dropdown">
-    <span class="dropbtn">Дополнительно ▾</span>
-    <div class="dropdown-content">
-        <a href="pages/tribunal.html">Трибунал</a>
-        <a href="pages/immunity.html">Список Неприкосновенности</a>
-        <a href="pages/shock.html">Ударный Батальон</a>
-        <a href="pages/specializations.html">Специализации</a>
-        <a href="pages/rep-weapons.html">Вооружение республики</a>
-        <a href="pages/cns-weapons.html">Вооружение КНС</a>
-        <a href="pages/rep-vehicles.html">Техника республики</a>
-        <a href="pages/cns-vehicles.html">Техника КНС</a>
-    </div>
-</div>
+                <div class="dropdown">
+                    <span class="dropbtn">Дополнительно ▾</span>
+                    <div class="dropdown-content">
+                        <a href="pages/tribunal.html">Трибунал</a>
+                        <a href="pages/immunity.html">Список Неприкосновенности</a>
+                        <a href="pages/shock.html">Ударный Батальон</a>
+                        <a href="pages/specializations.html">Специализации</a>
+                        <a href="pages/rep-weapons.html">Вооружение республики</a>
+                        <a href="pages/cns-weapons.html">Вооружение КНС</a>
+                        <a href="pages/rep-vehicles.html">Техника республики</a>
+                        <a href="pages/cns-vehicles.html">Техника КНС</a>
+                    </div>
+                </div>
 
-    <a href="pages/contacts.html">Контакты</a>
-</div>
+                <a href="pages/contacts.html">Контакты</a>
+            </div>
         </nav>
     </header>
 
@@ -101,6 +107,9 @@
     <footer>
         © 2026 Sunrise of the Republic
     </footer>
+
+    <!-- ===== КНОПКА НАВЕРХ ===== -->
+    <button id="scrollTopBtn" title="Наверх">↑</button>
 
     <script src="script.js"></script>
 
