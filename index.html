@@ -2,175 +2,145 @@
 <html lang="ru">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunrise of the Republic</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-<title>Sunrise of the Republic</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-<div class="background"></div>
-
-<header>
-
-<nav class="navbar">
-
-<a href="index.html" class="logo">
-
-Sunrise of the Republic
-
-</a>
-
-<div class="menu">
-
-<a href="pages/charter.html">Устав</a>
-
-<a href="pages/positions.html">Должности</a>
-
-<a href="pages/formations.html">Формирование</a>
-
-<a href="pages/extra.html">Дополнительно</a>
-
-<a href="pages/contacts.html">Контакты</a>
-
-</div>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<p class="subtitle">
-Российское игровое подразделение
-</p>
-
-<h1>
-
-Sunrise<br>
-
-of the Republic
-
-</h1>
-
-<p class="description">
-
-Дисциплина.
-Командная работа.
-Постоянное развитие.
-
-</p>
-
-<div class="buttons">
-
-<a href="pages/charter.html" class="primary">
-
-Основной устав
-
-</a>
-
-<a href="#about" class="secondary">
-
-Подробнее
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="about" class="about">
-
-<h2>
-
-О подразделении
-
-</h2>
-
-<p>
-
-Sunrise of the Republic — игровое подразделение, объединяющее игроков для совместных операций, развития навыков и командной работы.
-
-Мы стремимся создать дружелюбное, дисциплинированное и организованное сообщество, где каждый участник сможет раскрыть свой потенциал.
-
-</p>
-
-</section>
-
-<section class="features">
-
-<div class="card">
-
-<h3>🛡 Дисциплина</h3>
-
-<p>
-
-Следуем уставу и поддерживаем порядок.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>⚔ Командная работа</h3>
-
-<p>
-
-Любая операция начинается с доверия.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🎖 Развитие</h3>
-
-<p>
-
-Каждый боец постоянно совершенствует навыки.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚀 Активность</h3>
-
-<p>
-
-Регулярные тренировки и мероприятия.
-
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Sunrise of the Republic
-
-</footer>
-
-<script src="script.js"></script>
-
+    <div class="background"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Sunrise of the Republic</a>
+
+            <div class="menu" id="menu">
+                <a href="pages/charter.html">Устав</a>
+                <a href="pages/positions.html">Должности</a>
+                <a href="pages/formations.html">Формирование</a>
+                <a href="pages/extra.html">Дополнительно</a>
+                <a href="pages/contacts.html">Контакты</a>
+            </div>
+
+            <!-- Бургер-кнопка -->
+            <div class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="subtitle">Российское игровое подразделение</p>
+            <h1>
+                Sunrise<br />
+                of the Republic
+            </h1>
+            <p class="description">Дисциплина. Командная работа. Постоянное развитие.</p>
+            <div class="buttons">
+                <a href="pages/charter.html" class="primary">Основной устав</a>
+                <a href="#about" class="secondary">Подробнее</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about">
+        <h2>О подразделении</h2>
+        <p>
+            Sunrise of the Republic — игровое подразделение, объединяющее игроков
+            для совместных операций, развития навыков и командной работы. Мы
+            стремимся создать дружелюбное, дисциплинированное и организованное
+            сообщество, где каждый участник сможет раскрыть свой потенциал.
+        </p>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features">
+        <div class="card">
+            <h3>🛡 Дисциплина</h3>
+            <p>Следуем уставу и поддерживаем порядок.</p>
+        </div>
+        <div class="card">
+            <h3>⚔ Командная работа</h3>
+            <p>Любая операция начинается с доверия.</p>
+        </div>
+        <div class="card">
+            <h3>🎖 Развитие</h3>
+            <p>Каждый боец постоянно совершенствует навыки.</p>
+        </div>
+        <div class="card">
+            <h3>🚀 Активность</h3>
+            <p>Регулярные тренировки и мероприятия.</p>
+        </div>
+    </section>
+
+    <!-- ===== COMMANDERS ===== -->
+    <section class="commanders">
+        <h2>Командный состав</h2>
+        <div class="commanders-grid">
+            <div class="commander-card">
+                <div class="commander-avatar">👤</div>
+                <h3>Командир</h3>
+                <p>Позывной: <strong>Sunrise</strong></p>
+                <span class="commander-role">Основатель</span>
+            </div>
+            <div class="commander-card">
+                <div class="commander-avatar">👤</div>
+                <h3>Зам. командира</h3>
+                <p>Позывной: <strong>Eclipse</strong></p>
+                <span class="commander-role">Тактика</span>
+            </div>
+            <div class="commander-card">
+                <div class="commander-avatar">👤</div>
+                <h3>Начальник штаба</h3>
+                <p>Позывной: <strong>Nova</strong></p>
+                <span class="commander-role">Координация</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background: #1a2a3a;">📸</div>
+            <div class="gallery-item" style="background: #1a2a3a;">📸</div>
+            <div class="gallery-item" style="background: #1a2a3a;">📸</div>
+            <div class="gallery-item" style="background: #1a2a3a;">📸</div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Sunrise of the Republic</div>
+            <div class="footer-links">
+                <a href="pages/charter.html">Устав</a>
+                <a href="pages/positions.html">Должности</a>
+                <a href="pages/formations.html">Формирование</a>
+                <a href="pages/contacts.html">Контакты</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Telegram">📱</a>
+                <a href="#" aria-label="Discord">💬</a>
+                <a href="#" aria-label="YouTube">▶️</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Sunrise of the Republic</div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
