@@ -1,3 +1,7 @@
+// ============================================================
+// АНИМАЦИЯ ПРИ ПРОКРУТКЕ
+// ============================================================
+
 const cards = document.querySelectorAll('.card');
 
 const observer = new IntersectionObserver((entries) => {
@@ -25,10 +29,16 @@ const aboutSection = document.querySelector('.about');
 const aboutObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.querySelector('h2').style.opacity = '1';
-            entry.target.querySelector('h2').style.transform = 'translateY(0)';
-            entry.target.querySelector('p').style.opacity = '1';
-            entry.target.querySelector('p').style.transform = 'translateY(0)';
+            const h2 = entry.target.querySelector('h2');
+            const p = entry.target.querySelector('p');
+            if (h2) {
+                h2.style.opacity = '1';
+                h2.style.transform = 'translateY(0)';
+            }
+            if (p) {
+                p.style.opacity = '1';
+                p.style.transform = 'translateY(0)';
+            }
         }
     });
 }, {
@@ -38,31 +48,36 @@ const aboutObserver = new IntersectionObserver((entries) => {
 if (aboutSection) {
     aboutObserver.observe(aboutSection);
 }
-// ============================================================
-// НОВЫЕ ФИЧИ: Кнопка Наверх + Частицы + Параллакс
-// ============================================================
 
-// ===== 1. КНОПКА НАВЕРХ =====
+
+// ============================================================
+// КНОПКА НАВЕРХ
+// ============================================================
 
 const scrollBtn = document.getElementById('scrollTopBtn');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-        scrollBtn.classList.add('show');
-    } else {
-        scrollBtn.classList.remove('show');
-    }
-});
-
-scrollBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+// Проверяем, есть ли кнопка на странице
+if (scrollBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
     });
-});
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 
-// ===== 2. ЧАСТИЦЫ =====
+// ============================================================
+// ЧАСТИЦЫ
+// ============================================================
 
 if (typeof particlesJS !== 'undefined') {
     particlesJS('particles-js', {
@@ -147,154 +162,42 @@ if (typeof particlesJS !== 'undefined') {
 }
 
 
-// ===== 3. ПАРАЛЛАКС =====
-
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const scrolled = window.pageYOffset;
-        hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
-    }
-});
 // ============================================================
-// ВСЕ НОВЫЕ ФИЧИ
+// СВОЙ КУРСОР
 // ============================================================
-
-// ===== 1. КНОПКА НАВЕРХ =====
-
-const scrollBtn = document.getElementById('scrollTopBtn');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-        scrollBtn.classList.add('show');
-    } else {
-        scrollBtn.classList.remove('show');
-    }
-});
-
-scrollBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-
-// ===== 2. ЧАСТИЦЫ =====
-
-if (typeof particlesJS !== 'undefined') {
-    particlesJS('particles-js', {
-        particles: {
-            number: {
-                value: 80,
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: '#4ebcff'
-            },
-            shape: {
-                type: 'circle'
-            },
-            opacity: {
-                value: 0.5,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false
-                }
-            },
-            size: {
-                value: 3,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 2,
-                    size_min: 0.5,
-                    sync: false
-                }
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#4ebcff',
-                opacity: 0.2,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 1.5,
-                direction: 'none',
-                random: true,
-                straight: false,
-                out_mode: 'out',
-                bounce: false
-            }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: 'grab'
-                },
-                onclick: {
-                    enable: true,
-                    mode: 'push'
-                },
-                resize: true
-            },
-            modes: {
-                grab: {
-                    distance: 140,
-                    line_linked: {
-                        opacity: 0.5
-                    }
-                },
-                push: {
-                    particles_nb: 4
-                }
-            }
-        },
-        retina_detect: true
-    });
-}
-
-
-// ===== 3. СВОЙ КУРСОР =====
 
 const cursor = document.getElementById('custom-cursor');
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
-
-const hoverElements = document.querySelectorAll('a, button, .card, .primary, .secondary, .menu a, .logo');
-
-hoverElements.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.classList.add('hover');
+if (cursor) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
     });
-    el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
+
+    const hoverElements = document.querySelectorAll('a, button, .card, .primary, .secondary, .menu a, .logo');
+
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+        });
     });
-});
 
-document.addEventListener('mouseleave', () => {
-    cursor.style.opacity = '0';
-});
+    document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+    });
 
-document.addEventListener('mouseenter', () => {
-    cursor.style.opacity = '1';
-});
+    document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+    });
+}
 
 
-// ===== 4. ПАРАЛЛАКС =====
+// ============================================================
+// ПАРАЛЛАКС
+// ============================================================
 
 window.addEventListener('scroll', () => {
     const hero = document.querySelector('.hero');
@@ -305,11 +208,13 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ===== 5. 3D-ЭФФЕКТ КАРТОЧЕК =====
+// ============================================================
+// 3D-ЭФФЕКТ КАРТОЧЕК
+// ============================================================
 
-const cards = document.querySelectorAll('.features .card');
+const featureCards = document.querySelectorAll('.features .card');
 
-cards.forEach(card => {
+featureCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -352,23 +257,5 @@ contactCards.forEach(card => {
     
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-    });
-});
-// ===== КНОПКА НАВЕРХ =====
-
-const scrollBtn = document.getElementById('scrollTopBtn');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-        scrollBtn.classList.add('show');
-    } else {
-        scrollBtn.classList.remove('show');
-    }
-});
-
-scrollBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
     });
 });
