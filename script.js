@@ -226,3 +226,55 @@ contactCards.forEach(card => {
         card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
     });
 });
+// ===== RIPPLE-ЭФФЕКТ НА КНОПКАХ =====
+
+// Функция для создания ripple
+function createRipple(event) {
+    const button = event.currentTarget;
+    
+    // Удаляем старые ripple, если есть
+    const oldRipple = button.querySelector('.ripple');
+    if (oldRipple) {
+        oldRipple.remove();
+    }
+    
+    // Создаём ripple элемент
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple');
+    
+    // Определяем размер и позицию
+    const rect = button.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = event.clientX - rect.left - size / 2;
+    const y = event.clientY - rect.top - size / 2;
+    
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    
+    button.appendChild(ripple);
+    
+    // Удаляем ripple после анимации
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+}
+
+// Добавляем ripple на все кнопки с классами primary и secondary
+document.querySelectorAll('.primary, .secondary, .contact-btn, .primary-btn, .btn').forEach(button => {
+    button.classList.add('ripple-btn');
+    button.addEventListener('click', createRipple);
+});
+
+// Также добавляем на кнопки в навигации (но без ripple)
+// И на кнопку "Наверх" — тоже можно добавить
+const scrollBtn = document.getElementById('scrollTopBtn');
+if (scrollBtn) {
+    scrollBtn.addEventListener('click', function(e) {
+        // Маленькая анимация при клике
+        this.style.transform = 'scale(0.8)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 200);
+    });
+}
