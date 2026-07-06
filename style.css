@@ -1,29 +1,241 @@
-/* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ФУТЕРА ===== */
-
-footer {
-    padding: 70px 50px 40px;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.footer-links {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #050b14;
+    color: white;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at top, #12335c 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #0f2745 0%, transparent 35%),
+        linear-gradient(180deg, #050b14 0%, #08111d 100%);
+}
+
+/* NAV */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(18px);
+    background: rgba(5, 11, 20, .55);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    height: 80px;
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
 }
 
-.footer-links a {
-    color: #bcc8d6;
+.logo {
+    color: white;
     text-decoration: none;
-    transition: 0.3s;
+    font-size: 28px;
+    font-weight: 700;
 }
 
-.footer-links a:hover {
+.menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #d6d6d6;
+    transition: .3s;
+}
+
+.menu a:hover {
     color: #4ebcff;
 }
 
-.footer-copy {
-    opacity: 0.6;
-    font-size: 14px;
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 18, 30, 0.95);
+    min-width: 180px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+    color: #d6d6d6;
+}
+
+.dropdown-content a:hover {
+    background: rgba(78,188,255,0.15);
+    color: #4ebcff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 82px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 22px;
+    color: #c7d5e5;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.primary {
+    background: #2ea8ff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(46,168,255,.4);
+}
+
+.secondary {
+    border: 1px solid #2ea8ff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.secondary:hover {
+    background: #2ea8ff;
+}
+
+/* ABOUT */
+
+.about {
+    max-width: 1000px;
+    margin: auto;
+    padding: 120px 30px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #c8d2df;
+}
+
+/* FEATURES */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 50px;
+}
+
+.card {
+    background: rgba(255,255,255,.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 22px;
+    padding: 35px;
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    border-color: #2ea8ff;
+    box-shadow: 0 15px 40px rgba(46,168,255,.25);
+}
+
+.card h3 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.card p {
+    color: #bcc8d6;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 70px;
+    text-align: center;
+    opacity: .6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+    .hero h1 { font-size: 54px; }
+    .menu { display: none; }
+    .navbar { padding: 0 20px; }
+    .about h2 { font-size: 36px; }
 }
