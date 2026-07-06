@@ -691,7 +691,7 @@ footer {
 /* ===== СТРАНИЦА ДОЛЖНОСТИ (ТЕКСТОВЫЙ ВАРИАНТ) ===== */
 
 .positions-page .page-container {
-    max-width: 1000px;
+    max-width: 1200px;
     text-align: left;
 }
 
@@ -709,7 +709,7 @@ footer {
 
 .positions-text h2 {
     font-size: 32px;
-    margin: 50px 0 30px 0;
+    margin: 60px 0 35px 0;
     color: #4ebcff;
     text-align: center;
 }
@@ -722,8 +722,8 @@ footer {
     background: rgba(255, 255, 255, 0.04);
     border-left: 3px solid rgba(46, 168, 255, 0.3);
     border-radius: 12px;
-    padding: 25px 30px;
-    margin-bottom: 25px;
+    padding: 25px 35px;
+    margin-bottom: 35px;
     transition: 0.3s;
 }
 
@@ -736,44 +736,50 @@ footer {
     font-size: 24px;
     font-weight: 700;
     color: #2ea8ff;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .position-block p {
     color: #c8d2df;
     font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 12px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.position-block p:last-child {
+    margin-bottom: 0;
 }
 
 .position-block .note {
     color: #f0c060;
     font-size: 15px;
-    padding: 12px 16px;
+    padding: 14px 18px;
     background: rgba(240, 192, 96, 0.08);
     border-radius: 8px;
     border-left: 3px solid #f0c060;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .position-block .sub-title {
     color: #4ebcff;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 18px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 12px;
 }
 
 .position-block ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 15px 0;
+    margin: 10px 0 16px 0;
 }
 
 .position-block ul li {
     color: #c8d2df;
     font-size: 15px;
-    line-height: 1.6;
-    padding: 6px 0 6px 24px;
+    line-height: 1.7;
+    padding: 8px 0 8px 24px;
     position: relative;
 }
 
@@ -791,8 +797,13 @@ footer {
 /* ===== АДАПТИВ ===== */
 
 @media (max-width: 768px) {
+    .positions-page .page-container {
+        max-width: 100%;
+    }
+
     .position-block {
-        padding: 18px 16px;
+        padding: 18px 20px;
+        margin-bottom: 25px;
     }
 
     .position-title {
@@ -805,11 +816,12 @@ footer {
 
     .positions-text h2 {
         font-size: 26px;
+        margin: 40px 0 25px 0;
     }
 
     .position-block ul li {
         font-size: 13px;
-        padding: 4px 0 4px 20px;
+        padding: 6px 0 6px 20px;
     }
 
     .position-block .note {
@@ -824,15 +836,19 @@ footer {
 
 @media (max-width: 480px) {
     .position-block {
-        padding: 14px 12px;
+        padding: 14px 14px;
+        margin-bottom: 20px;
     }
 
     .position-title {
         font-size: 17px;
+        margin-bottom: 10px;
     }
 
     .position-block p {
         font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 10px;
     }
 
     .positions-text h2 {
@@ -842,7 +858,7 @@ footer {
 
     .position-block ul li {
         font-size: 12px;
-        padding: 3px 0 3px 16px;
+        padding: 4px 0 4px 16px;
     }
 
     .position-block .note {
