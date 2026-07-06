@@ -1158,9 +1158,9 @@ footer {
     font-size: 28px;
     font-weight: 700;
     color: #4ebcff;
-    margin: 45px 0 28px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgba(46, 168, 255, 0.2);
+    margin: 55px 0 32px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(46, 168, 255, 0.25);
 }
 
 .charter-section-title:first-of-type {
@@ -1171,8 +1171,8 @@ footer {
     background: rgba(255, 255, 255, 0.04);
     border-left: 3px solid rgba(46, 168, 255, 0.3);
     border-radius: 12px;
-    padding: 22px 30px;
-    margin-bottom: 22px;
+    padding: 26px 35px;
+    margin-bottom: 28px;
     transition: 0.3s;
 }
 
@@ -1195,14 +1195,14 @@ footer {
     font-size: 20px;
     font-weight: 700;
     color: #2ea8ff;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .charter-subtitle {
     font-size: 18px;
     font-weight: 600;
     color: #4ebcff;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .charter-number {
@@ -1213,8 +1213,8 @@ footer {
 .charter-block p {
     color: #c8d2df;
     font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 10px;
+    line-height: 1.9;
+    margin-bottom: 12px;
 }
 
 .charter-block p:last-child {
@@ -1224,14 +1224,14 @@ footer {
 .charter-block ul {
     list-style: none;
     padding: 0;
-    margin: 8px 0 8px 0;
+    margin: 10px 0 10px 0;
 }
 
 .charter-block ul li {
     color: #c8d2df;
     font-size: 14px;
-    line-height: 1.7;
-    padding: 5px 0 5px 24px;
+    line-height: 1.8;
+    padding: 6px 0 6px 26px;
     position: relative;
 }
 
@@ -1242,14 +1242,19 @@ footer {
     left: 0;
 }
 
+.charter-block ul li strong {
+    color: #e0e8f0;
+}
+
 .charter-block .note {
     color: #f0c060;
     font-size: 14px;
-    padding: 10px 14px;
+    padding: 12px 16px;
     background: rgba(240, 192, 96, 0.06);
     border-radius: 6px;
     border-left: 3px solid #f0c060;
-    margin-top: 6px;
+    margin-top: 8px;
+    line-height: 1.7;
 }
 
 /* ===== АДАПТИВ ===== */
@@ -1260,8 +1265,8 @@ footer {
     }
 
     .charter-block {
-        padding: 18px 20px;
-        margin-bottom: 18px;
+        padding: 20px 22px;
+        margin-bottom: 20px;
     }
 
     .charter-title {
@@ -1274,57 +1279,62 @@ footer {
 
     .charter-block p {
         font-size: 14px;
-        line-height: 1.6;
+        line-height: 1.7;
     }
 
     .charter-section-title {
         font-size: 22px;
-        margin: 35px 0 22px 0;
+        margin: 40px 0 24px 0;
     }
 
     .charter-block ul li {
         font-size: 13px;
-        padding: 4px 0 4px 20px;
+        padding: 5px 0 5px 22px;
     }
 
     .charter-block .note {
         font-size: 13px;
-        padding: 8px 12px;
+        padding: 10px 14px;
     }
 }
 
 @media (max-width: 480px) {
     .charter-block {
-        padding: 14px 14px;
-        margin-bottom: 14px;
+        padding: 16px 16px;
+        margin-bottom: 16px;
     }
 
     .charter-title {
         font-size: 15px;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
 
     .charter-subtitle {
         font-size: 14px;
+        margin-bottom: 6px;
     }
 
     .charter-block p {
         font-size: 13px;
-        margin-bottom: 6px;
+        line-height: 1.6;
+        margin-bottom: 8px;
     }
 
     .charter-section-title {
         font-size: 18px;
-        margin: 25px 0 16px 0;
+        margin: 30px 0 18px 0;
+        padding-bottom: 8px;
     }
 
     .charter-block ul li {
         font-size: 12px;
-        padding: 3px 0 3px 16px;
+        padding: 4px 0 4px 18px;
+        line-height: 1.6;
     }
 
     .charter-block .note {
         font-size: 12px;
-        padding: 6px 10px;
+        padding: 8px 12px;
+        line-height: 1.5;
     }
 }
