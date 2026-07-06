@@ -1343,14 +1343,14 @@ footer {
 .menu .dropdown .dropbtn {
     cursor: default;
     pointer-events: none;
+    color: #d6d6d6 !important;
 }
 
-/* Чтобы ссылка не меняла цвет при наведении */
 .menu .dropdown .dropbtn:hover {
-    color: #d6d6d6;
+    color: #d6d6d6 !important;
 }
 
-/* Но выпадающий список должен работать */
+/* Выпадающий список работает при наведении */
 .dropdown:hover .dropdown-content {
     display: block;
 }
