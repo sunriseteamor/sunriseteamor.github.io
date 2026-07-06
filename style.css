@@ -622,7 +622,6 @@ footer {
         font-size: 11px;
     }
 }
-
 /* ===== СТРАНИЦА ДОЛЖНОСТИ (ТЕКСТОВЫЙ ВАРИАНТ) ===== */
 
 .positions-page .page-container {
@@ -1511,8 +1510,10 @@ footer {
     .formation-block .note {
         font-size: 12px;
         padding: 8px 12px;
+    }
+}
 
-        /* ===== СТРАНИЦЫ РАЗДЕЛА "ДОПОЛНИТЕЛЬНО" (как в уставе) ===== */
+/* ===== СТРАНИЦЫ РАЗДЕЛА "ДОПОЛНИТЕЛЬНО" (как в уставе) ===== */
 
 .extra-page .page-container {
     max-width: 1200px;
@@ -1856,6 +1857,45 @@ footer {
     text-shadow: 0 0 50px rgba(46, 168, 255, 0.3),
                  0 0 100px rgba(46, 168, 255, 0.1);
 }
+/* ============================================================
+   ВСЕ НОВЫЕ ФИЧИ
+   ============================================================ */
+
+/* ===== 1. АНИМИРОВАННЫЙ ГРАДИЕНТНЫЙ ФОН ===== */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(270deg, #050b14, #0f1f3a, #12335c, #0f1f3a, #050b14);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(46, 168, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(78, 188, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(0, 100, 200, 0.03) 0%, transparent 60%);
+    animation: glowPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
 
 /* ===== 4. СТЕКЛЯННЫЙ ЭФФЕКТ (GLASSMORPHISM) ===== */
 
@@ -2197,6 +2237,7 @@ footer {
     animation: gradientText 4s ease infinite;
     display: inline-block;
 }
+/* ===== СМЕНА ФОНА ПРИ СКРОЛЛЕ ===== */
 
 /* Анимированный фон с переливом */
 .background {
@@ -2277,6 +2318,67 @@ body.scrolled .background::before {
 
 .secondary .ripple {
     background: rgba(46, 168, 255, 0.3);
+}
+/* Синхронизация — одинаковая анимация для фона и текста */
+.background,
+.hero h1,
+.page-container h1 {
+    animation: syncGradient 12s ease infinite;
+}
+
+@keyframes syncGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.background {
+    background: linear-gradient(270deg, #050b14, #0f1f3a, #12335c, #0f1f3a, #050b14);
+    background-size: 400% 400%;
+}
+
+.hero h1,
+.page-container h1 {
+    background: linear-gradient(270deg, #4ebcff, #a855f7, #4ebcff, #a855f7, #4ebcff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+/* Принудительная центровка для заголовков */
+.hero-content h1,
+.page-container h1,
+.about h2,
+.features h2 {
+    display: block !important;
+    text-align: center !important;
+}
+
+/* Для родительских контейнеров */
+.hero-content,
+.page-container,
+.about,
+.features {
+    text-align: center;
+}
+
+/* Но для страниц с левым текстом — оставляем левое выравнивание */
+.formation-page .page-container,
+.rules-page .page-container,
+.charter-page .page-container,
+.extra-page .page-container,
+.positions-page .page-container {
+    text-align: left;
+}
+
+/* А заголовки внутри них — по центру */
+.formation-page .page-container h1,
+.rules-page .page-container h1,
+.charter-page .page-container h1,
+.extra-page .page-container h1,
+.positions-page .page-container h1 {
+    display: block !important;
+    text-align: center !important;
 }
 /* ===== СТРАНИЦА ВООРУЖЕНИЕ ===== */
 
