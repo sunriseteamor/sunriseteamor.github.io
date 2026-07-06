@@ -1,7 +1,3 @@
-/* ============================================================
-   БАЗОВЫЕ СТИЛИ
-   ============================================================ */
-
 * {
     margin: 0;
     padding: 0;
@@ -19,10 +15,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ============================================================
-   ФОН (только один!)
-   ============================================================ */
-
 .background {
     position: fixed;
     inset: 0;
@@ -31,90 +23,9 @@ body {
         radial-gradient(circle at top, #12335c 0%, transparent 40%),
         radial-gradient(circle at bottom right, #0f2745 0%, transparent 35%),
         linear-gradient(180deg, #050b14 0%, #08111d 100%);
-    animation: backgroundPulse 8s ease-in-out infinite alternate;
 }
 
-@keyframes backgroundPulse {
-    0% { opacity: 0.8; }
-    100% { opacity: 1; }
-}
-
-/* ============================================================
-   СЕТКА НА ФОНЕ
-   ============================================================ */
-
-#gridCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-/* ============================================================
-   ЧАСТИЦЫ
-   ============================================================ */
-
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* ============================================================
-   КАСТОМНЫЙ КУРСОР
-   ============================================================ */
-
-#custom-cursor {
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    background: radial-gradient(circle at center, rgba(78, 188, 255, 0.6), rgba(46, 168, 255, 0.2));
-    border: 2px solid rgba(78, 188, 255, 0.8);
-    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.15s ease, height 0.15s ease;
-    animation: cursorColorShift 3s ease-in-out infinite;
-}
-
-#custom-cursor::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: white;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-#custom-cursor.hover {
-    width: 40px;
-    height: 40px;
-}
-
-@keyframes cursorColorShift {
-    0% { border-color: rgba(46, 168, 255, 0.8); }
-    33% { border-color: rgba(100, 100, 255, 0.8); }
-    66% { border-color: rgba(46, 255, 200, 0.8); }
-    100% { border-color: rgba(46, 168, 255, 0.8); }
-}
-
-/* ============================================================
-   ШАПКА (HEADER)
-   ============================================================ */
+/* NAV */
 
 header {
     position: fixed;
@@ -123,8 +34,8 @@ header {
     left: 0;
     z-index: 1000;
     backdrop-filter: blur(18px);
-    background: rgba(5, 11, 20, 0.55);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(5, 11, 20, .55);
+    border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .navbar {
@@ -142,12 +53,6 @@ header {
     text-decoration: none;
     font-size: 28px;
     font-weight: 700;
-    transition: text-shadow 0.4s ease;
-}
-
-.logo:hover {
-    text-shadow: 0 0 20px rgba(78, 188, 255, 0.5),
-                 0 0 60px rgba(78, 188, 255, 0.2);
 }
 
 .menu {
@@ -156,6 +61,233 @@ header {
     align-items: center;
 }
 
+.menu a {
+    text-decoration: none;
+    color: #d6d6d6;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: #4ebcff;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 18, 30, 0.95);
+    min-width: 180px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+    color: #d6d6d6;
+}
+
+.dropdown-content a:hover {
+    background: rgba(78,188,255,0.15);
+    color: #4ebcff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 82px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 22px;
+    color: #c7d5e5;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.primary {
+    background: #2ea8ff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(46,168,255,.4);
+}
+
+.secondary {
+    border: 1px solid #2ea8ff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.secondary:hover {
+    background: #2ea8ff;
+}
+
+/* ABOUT */
+
+.about {
+    max-width: 1000px;
+    margin: auto;
+    padding: 120px 30px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #c8d2df;
+}
+
+/* FEATURES */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 50px;
+}
+
+.card {
+    background: rgba(255,255,255,.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 22px;
+    padding: 35px;
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    border-color: #2ea8ff;
+    box-shadow: 0 15px 40px rgba(46,168,255,.25);
+}
+
+.card h3 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.card p {
+    color: #bcc8d6;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 70px;
+    text-align: center;
+    opacity: .6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+    .hero h1 { font-size: 54px; }
+    .menu { display: none; }
+    .navbar { padding: 0 20px; }
+    .about h2 { font-size: 36px; }
+}
+/* ===== АНИМАЦИИ ===== */
+
+/* 1. Анимация для заголовка */
+.hero h1 {
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* 2. Анимация для кнопок (с задержкой) */
+.hero .buttons {
+    animation: fadeInUp 1.2s ease 0.4s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3. Анимация для карточек при наведении (уже есть, добавим плавность) */
+.card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                border-color 0.3s ease,
+                box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: #2ea8ff;
+    box-shadow: 0 20px 50px rgba(46, 168, 255, 0.3);
+}
+
+/* 4. Плавное подчёркивание для меню */
 .menu a {
     position: relative;
     text-decoration: none;
@@ -170,7 +302,7 @@ header {
     left: 0;
     width: 0%;
     height: 2px;
-    background: linear-gradient(90deg, #4ebcff, #0066cc);
+    background: #4ebcff;
     transition: width 0.3s ease;
 }
 
@@ -182,241 +314,41 @@ header {
     width: 100%;
 }
 
-/* ============================================================
-   ВЫПАДАЮЩИЕ СПИСКИ
-   ============================================================ */
-
-.dropdown {
-    position: relative;
-    display: inline-block;
+/* 5. Анимация для логотипа (свечение) */
+.logo {
+    transition: text-shadow 0.4s ease;
 }
 
-.dropbtn {
-    cursor: default;
-    pointer-events: none;
-    color: #d6d6d6;
-    text-decoration: none;
+.logo:hover {
+    text-shadow: 0 0 20px rgba(78, 188, 255, 0.5),
+                 0 0 60px rgba(78, 188, 255, 0.2);
 }
 
-.dropbtn:hover {
-    color: #d6d6d6;
+/* 6. Анимация фона (медленная пульсация) */
+.background {
+    animation: backgroundPulse 8s ease-in-out infinite alternate;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(10, 18, 30, 0.95);
-    min-width: 240px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    z-index: 999;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(25px);
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px 18px;
-    color: #d6d6d6;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.dropdown-content a:hover {
-    background: rgba(78, 188, 255, 0.15);
-    color: #4ebcff;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* ============================================================
-   ГЛАВНЫЙ ЭКРАН (HERO)
-   ============================================================ */
-
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    position: relative;
-}
-
-.hero h1 {
-    font-size: 82px;
-    line-height: 1;
-    margin-bottom: 25px;
-    animation: fadeInUp 1.2s ease forwards;
-}
-
-.hero .buttons {
-    animation: fadeInUp 1.2s ease 0.4s forwards;
-    opacity: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px) scale(0.95);
+@keyframes backgroundPulse {
+    0% {
+        opacity: 0.8;
     }
-    to {
+    100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
     }
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* ============================================================
-   КНОПКИ
-   ============================================================ */
-
-.primary {
-    background: linear-gradient(135deg, #2ea8ff, #0066cc);
-    padding: 18px 40px;
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.4s;
-    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.primary:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 0 50px rgba(46, 168, 255, 0.5),
-                0 15px 35px rgba(46, 168, 255, 0.4);
-}
-
-.secondary {
-    border: 2px solid rgba(46, 168, 255, 0.6);
-    padding: 18px 40px;
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.4s;
-    box-shadow: 0 0 20px rgba(46, 168, 255, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.secondary:hover {
-    background: rgba(46, 168, 255, 0.15);
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 0 40px rgba(46, 168, 255, 0.3);
-}
-
-/* ============================================================
-   СЕКЦИЯ "О ПОДРАЗДЕЛЕНИИ"
-   ============================================================ */
-
-.about {
-    max-width: 1000px;
-    margin: auto;
-    padding: 120px 30px;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 48px;
-    margin-bottom: 30px;
-    animation: fadeInUp 1s ease forwards;
-}
-
-.about p {
-    font-size: 20px;
-    line-height: 1.8;
-    color: #c8d2df;
-    animation: fadeInUp 1s ease 0.3s forwards;
-    opacity: 0;
-}
-
-/* ============================================================
-   КАРТОЧКИ (FEATURES)
-   ============================================================ */
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    max-width: 1300px;
-    margin: auto;
-    padding: 50px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 22px;
-    padding: 35px;
-    transition: transform 0.15s ease, border-color 0.3s ease, box-shadow 0.4s ease;
-    will-change: transform;
-    position: relative;
-    overflow: hidden;
+/* 7. Анимация при прокрутке (появление карточек) */
+.features .card {
     opacity: 0;
     transform: translateY(40px);
     animation: scrollReveal 0.8s ease forwards;
 }
 
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.3s; }
-.card:nth-child(3) { animation-delay: 0.5s; }
-.card:nth-child(4) { animation-delay: 0.7s; }
-
-.card:hover {
-    transform: translateY(-12px) scale(1.02);
-    border-color: #4ebcff;
-    box-shadow: 0 0 30px rgba(46, 168, 255, 0.15),
-                0 0 60px rgba(46, 168, 255, 0.05);
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 22px;
-    background: radial-gradient(
-        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 255, 255, 0.05) 0%,
-        transparent 60%
-    );
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.card:hover::before {
-    opacity: 1;
-}
-
-.card h3 {
-    margin-bottom: 20px;
-    font-size: 26px;
-}
-
-.card p {
-    color: #bcc8d6;
-    line-height: 1.6;
-}
+.features .card:nth-child(1) { animation-delay: 0.1s; }
+.features .card:nth-child(2) { animation-delay: 0.3s; }
+.features .card:nth-child(3) { animation-delay: 0.5s; }
+.features .card:nth-child(4) { animation-delay: 0.7s; }
 
 @keyframes scrollReveal {
     from {
@@ -429,96 +361,30 @@ header {
     }
 }
 
-/* ============================================================
-   ФУТЕР
-   ============================================================ */
-
-footer {
-    padding: 70px;
-    text-align: center;
-    opacity: 0.6;
-    animation: fadeInUp 1s ease 0.6s forwards;
+/* 8. Анимация для заголовка "О подразделении" */
+.about h2 {
+    animation: fadeInUp 1s ease forwards;
 }
 
-/* ============================================================
-   КНОПКА НАВЕРХ
-   ============================================================ */
-
-#scrollTopBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-    width: 55px;
-    height: 55px;
-    border: 2px solid rgba(78, 188, 255, 0.4);
-    border-radius: 50%;
-    background: rgba(5, 11, 20, 0.6);
-    backdrop-filter: blur(15px);
-    color: #4ebcff;
-    font-size: 26px;
-    cursor: pointer;
+.about p {
+    animation: fadeInUp 1s ease 0.3s forwards;
     opacity: 0;
-    visibility: hidden;
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 30px rgba(46, 168, 255, 0.15);
-    text-shadow: 0 0 20px rgba(46, 168, 255, 0.3);
+}
+
+/* 9. Анимация для футера */
+footer {
+    animation: fadeInUp 1s ease 0.6s forwards;
+    opacity: 0;
+}
+/* ===== СТРАНИЦА КОНТАКТЫ ===== */
+
+.page-content {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 120px 30px 80px;
 }
-
-#scrollTopBtn.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-#scrollTopBtn:hover {
-    transform: translateY(-5px) scale(1.1);
-    border-color: rgba(78, 188, 255, 0.8);
-    box-shadow: 0 8px 40px rgba(46, 168, 255, 0.3);
-    background: rgba(46, 168, 255, 0.15);
-    color: #7fcbff;
-}
-
-#scrollTopBtn:active {
-    transform: scale(0.9);
-}
-
-/* ============================================================
-   НЕОНОВЫЕ АКЦЕНТЫ (общие для всех заголовков)
-   ============================================================ */
-
-.hero h1,
-.page-container h1,
-.charter-section-title,
-.rules-section-title,
-.formation-section-title,
-.extra-section-title {
-    text-shadow: 0 0 30px rgba(46, 168, 255, 0.15),
-                 0 0 60px rgba(46, 168, 255, 0.05);
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #4ebcff, transparent);
-    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3);
-    animation: neonPulse 3s infinite;
-}
-
-@keyframes neonPulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
-}
-
-/* ============================================================
-   СТРАНИЦЫ: общие стили для .page-container
-   ============================================================ */
 
 .page-container {
     max-width: 1200px;
@@ -537,9 +403,101 @@ footer {
     margin-bottom: 60px;
 }
 
-/* ============================================================
-   СТРАНИЦА КОНТАКТЫ
-   ============================================================ */
+/* Сетка контактов */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* Карточка контакта */
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    padding: 40px 30px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: #2ea8ff;
+    box-shadow: 0 20px 50px rgba(46, 168, 255, 0.25);
+}
+
+.contact-icon {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #bcc8d6;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: rgba(46, 168, 255, 0.15);
+    color: #4ebcff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+    border: 1px solid rgba(46, 168, 255, 0.2);
+}
+
+.contact-btn:hover {
+    background: #2ea8ff;
+    color: white;
+    box-shadow: 0 10px 30px rgba(46, 168, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 900px) {
+    .page-container h1 {
+        font-size: 44px;
+    }
+
+    .page-subtitle {
+        font-size: 17px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-container h1 {
+        font-size: 32px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-icon {
+        font-size: 40px;
+    }
+}
+/* ===== СТРАНИЦА КОНТАКТЫ ===== */
 
 .page-content {
     min-height: calc(100vh - 80px);
@@ -549,6 +507,24 @@ footer {
     padding: 100px 30px 60px;
 }
 
+.page-container {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.page-container h1 {
+    font-size: 56px;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    font-size: 18px;
+    color: #c7d5e5;
+    margin-bottom: 35px;
+}
+
+/* Сетка контактов — 2 колонки */
 .contacts-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -557,13 +533,14 @@ footer {
     margin: 0 auto;
 }
 
+/* Карточка контакта */
 .contact-card {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 50px;
     padding: 20px 18px;
-    transition: 0.4s;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -609,9 +586,43 @@ footer {
     transform: translateY(-3px);
 }
 
-/* ============================================================
-   СТРАНИЦА ДОЛЖНОСТИ
-   ============================================================ */
+/* ===== ФУТЕР (без ссылок) ===== */
+
+footer {
+    padding: 30px 50px 30px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.footer-copy {
+    font-size: 13px;
+}
+
+/* ===== АДАПТИВ ===== */
+    .contact-card h3 {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    .contact-card p {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .contact-btn {
+        padding: 4px 12px;
+        font-size: 10px;
+    }
+
+    footer {
+        padding: 20px 20px 20px;
+    }
+
+    .footer-copy {
+        font-size: 11px;
+    }
+}
+/* ===== СТРАНИЦА ДОЛЖНОСТИ (ТЕКСТОВЫЙ ВАРИАНТ) ===== */
 
 .positions-page .page-container {
     max-width: 1200px;
@@ -626,11 +637,19 @@ footer {
     text-align: center;
 }
 
+.positions-text {
+    margin-top: 30px;
+}
+
 .positions-text h2 {
     font-size: 32px;
     margin: 60px 0 35px 0;
     color: #4ebcff;
     text-align: center;
+}
+
+.positions-text h2:first-of-type {
+    margin-top: 0;
 }
 
 .position-block {
@@ -661,13 +680,41 @@ footer {
     margin-bottom: 14px;
 }
 
+.position-block p:last-child {
+    margin-bottom: 0;
+}
+
+.position-block .note {
+    color: #f0c060;
+    font-size: 15px;
+    padding: 14px 18px;
+    background: rgba(240, 192, 96, 0.08);
+    border-radius: 8px;
+    border-left: 3px solid #f0c060;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.position-block .sub-title {
+    color: #4ebcff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.position-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 16px 0;
+}
+
 .position-block ul li {
     color: #c8d2df;
     font-size: 15px;
     line-height: 1.7;
     padding: 8px 0 8px 24px;
     position: relative;
-    list-style: none;
 }
 
 .position-block ul li::before {
@@ -677,9 +724,87 @@ footer {
     left: 0;
 }
 
-/* ============================================================
-   СТРАНИЦА ПРАВИЛА
-   ============================================================ */
+.position-block ul li strong {
+    color: #e0e8f0;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .positions-page .page-container {
+        max-width: 100%;
+    }
+
+    .position-block {
+        padding: 18px 20px;
+        margin-bottom: 25px;
+    }
+
+    .position-title {
+        font-size: 20px;
+    }
+
+    .position-block p {
+        font-size: 14px;
+    }
+
+    .positions-text h2 {
+        font-size: 26px;
+        margin: 40px 0 25px 0;
+    }
+
+    .position-block ul li {
+        font-size: 13px;
+        padding: 6px 0 6px 20px;
+    }
+
+    .position-block .note {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+
+    .position-block .sub-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .position-block {
+        padding: 14px 14px;
+        margin-bottom: 20px;
+    }
+
+    .position-title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .position-block p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .positions-text h2 {
+        font-size: 20px;
+        margin: 30px 0 20px 0;
+    }
+
+    .position-block ul li {
+        font-size: 12px;
+        padding: 4px 0 4px 16px;
+    }
+
+    .position-block .note {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .position-block .sub-title {
+        font-size: 14px;
+    }
+}
+/* ===== СТРАНИЦА ПРАВИЛА (ОБНОВЛЁННАЯ) ===== */
 
 .rules-page .page-container {
     max-width: 1200px;
@@ -695,6 +820,10 @@ footer {
     margin-bottom: 40px;
 }
 
+.rules-text {
+    margin-top: 20px;
+}
+
 .rules-section-title {
     font-size: 28px;
     font-weight: 700;
@@ -702,6 +831,10 @@ footer {
     margin: 50px 0 30px 0;
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(46, 168, 255, 0.2);
+}
+
+.rules-section-title:first-of-type {
+    margin-top: 0;
 }
 
 .rule-block {
@@ -723,6 +856,11 @@ footer {
     background: rgba(240, 192, 96, 0.06);
 }
 
+.rule-block.note-block:hover {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.1);
+}
+
 .rule-title {
     font-size: 20px;
     font-weight: 700;
@@ -734,6 +872,17 @@ footer {
     color: #c8d2df;
     font-size: 15px;
     line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.rule-block p:last-child {
+    margin-bottom: 0;
+}
+
+.rule-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 10px 0;
 }
 
 .rule-block ul li {
@@ -742,12 +891,26 @@ footer {
     line-height: 1.7;
     padding: 5px 0 5px 24px;
     position: relative;
-    list-style: none;
 }
 
 .rule-block ul li::before {
     content: "▸";
     color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.rule-block .sub-rule {
+    color: #b0c4de;
+    font-size: 14px;
+    padding: 4px 0 4px 18px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.rule-block .sub-rule::before {
+    content: "—";
+    color: #4ebcff;
     position: absolute;
     left: 0;
 }
@@ -762,6 +925,7 @@ footer {
     display: inline-block;
 }
 
+/* Иерархия */
 .hierarchy-block {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -770,20 +934,136 @@ footer {
     margin-bottom: 25px;
 }
 
+.hierarchy-level {
+    margin-bottom: 24px;
+}
+
+.hierarchy-level:last-child {
+    margin-bottom: 0;
+}
+
 .hierarchy-level h4 {
     font-size: 18px;
     color: #4ebcff;
     margin-bottom: 12px;
 }
 
-/* ============================================================
-   СТРАНИЦА УСТАВ
-   ============================================================ */
-
-.charter-page .page-container {
-    max-width: 1200px;
-    text-align: left;
+.hierarchy-level ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
+.hierarchy-level ul li {
+    color: #c8d2df;
+    font-size: 15px;
+    padding: 4px 0 4px 0;
+    line-height: 1.6;
+}
+
+.hierarchy-icon {
+    margin-right: 8px;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .rules-page .page-container {
+        max-width: 100%;
+    }
+
+    .rule-block {
+        padding: 18px 20px;
+        margin-bottom: 20px;
+    }
+
+    .rule-title {
+        font-size: 17px;
+    }
+
+    .rule-block p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .rules-section-title {
+        font-size: 22px;
+        margin: 35px 0 22px 0;
+    }
+
+    .rule-block ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px;
+    }
+
+    .rule-block .sub-rule {
+        font-size: 13px;
+        padding: 3px 0 3px 16px;
+    }
+
+    .punishment {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .hierarchy-block {
+        padding: 22px 20px;
+    }
+
+    .hierarchy-level h4 {
+        font-size: 16px;
+    }
+
+    .hierarchy-level ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rule-block {
+        padding: 14px 14px;
+        margin-bottom: 16px;
+    }
+
+    .rule-title {
+        font-size: 15px;
+    }
+
+    .rule-block p {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .rule-block ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 16px;
+    }
+
+    .rule-block .sub-rule {
+        font-size: 12px;
+        padding: 2px 0 2px 14px;
+    }
+
+    .punishment {
+        font-size: 12px;
+        padding: 4px 10px;
+        margin-top: 4px;
+    }
+
+    .hierarchy-block {
+        padding: 16px 14px;
+    }
+
+    .hierarchy-level h4 {
+        font-size: 14px;
+    }
+
+    .hierarchy-level ul li {
+        font-size: 13px;
+        padding: 3px 0;
+    }
+}
+/* ===== СТРАНИЦА УСТАВ ===== */
 
 .charter-page h1 {
     text-align: center;
@@ -794,6 +1074,10 @@ footer {
     margin-bottom: 40px;
 }
 
+.charter-text {
+    margin-top: 20px;
+}
+
 .charter-section-title {
     font-size: 28px;
     font-weight: 700;
@@ -801,6 +1085,10 @@ footer {
     margin: 55px 0 32px 0;
     padding-bottom: 12px;
     border-bottom: 2px solid rgba(46, 168, 255, 0.25);
+}
+
+.charter-section-title:first-of-type {
+    margin-top: 0;
 }
 
 .charter-block {
@@ -822,6 +1110,11 @@ footer {
     background: rgba(240, 192, 96, 0.06);
 }
 
+.charter-block.note-block:hover {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.1);
+}
+
 .charter-title {
     font-size: 20px;
     font-weight: 700;
@@ -836,10 +1129,26 @@ footer {
     margin-bottom: 10px;
 }
 
+.charter-number {
+    color: #2ea8ff;
+    font-weight: 700;
+}
+
 .charter-block p {
     color: #c8d2df;
     font-size: 15px;
     line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.charter-block p:last-child {
+    margin-bottom: 0;
+}
+
+.charter-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 10px 0;
 }
 
 .charter-block ul li {
@@ -848,7 +1157,6 @@ footer {
     line-height: 1.8;
     padding: 6px 0 6px 26px;
     position: relative;
-    list-style: none;
 }
 
 .charter-block ul li::before {
@@ -856,6 +1164,10 @@ footer {
     color: #2ea8ff;
     position: absolute;
     left: 0;
+}
+
+.charter-block ul li strong {
+    color: #e0e8f0;
 }
 
 .charter-block .note {
@@ -866,11 +1178,149 @@ footer {
     border-radius: 6px;
     border-left: 3px solid #f0c060;
     margin-top: 8px;
+    line-height: 1.7;
 }
 
-/* ============================================================
-   СТРАНИЦЫ ФОРМИРОВАНИЙ
-   ============================================================ */
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .charter-page .page-container {
+        max-width: 100%;
+    }
+
+    .charter-block {
+        padding: 20px 22px;
+        margin-bottom: 20px;
+    }
+
+    .charter-title {
+        font-size: 17px;
+    }
+
+    .charter-subtitle {
+        font-size: 16px;
+    }
+
+    .charter-block p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .charter-section-title {
+        font-size: 22px;
+        margin: 40px 0 24px 0;
+    }
+
+    .charter-block ul li {
+        font-size: 13px;
+        padding: 5px 0 5px 22px;
+    }
+
+    .charter-block .note {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .charter-block {
+        padding: 16px 16px;
+        margin-bottom: 16px;
+    }
+
+    .charter-title {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .charter-subtitle {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .charter-block p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+
+    .charter-section-title {
+        font-size: 18px;
+        margin: 30px 0 18px 0;
+        padding-bottom: 8px;
+    }
+
+    .charter-block .note {
+        font-size: 12px;
+        padding: 8px 12px;
+        line-height: 1.5;
+    }
+}
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 18, 30, 0.95);
+    min-width: 220px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* ===== ПРИНУДИТЕЛЬНЫЕ СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО СПИСКА ===== */
+
+.menu .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.menu .dropdown .dropbtn {
+    cursor: default;
+    pointer-events: none;
+    color: #d6d6d6;
+    text-decoration: none;
+}
+
+.menu .dropdown .dropbtn:hover {
+    color: #d6d6d6;
+}
+
+.menu .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 18, 30, 0.95);
+    min-width: 240px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+    z-index: 999;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+
+.menu .dropdown .dropdown-content a:hover {
+    background: rgba(78,188,255,0.15);
+    color: #4ebcff;
+}
+
+.menu .dropdown:hover .dropdown-content {
+    display: block;
+}
+/* ===== СТРАНИЦЫ ФОРМИРОВАНИЙ ===== */
 
 .formation-page .page-container {
     max-width: 1200px;
@@ -889,6 +1339,10 @@ footer {
     color: #c7d5e5;
 }
 
+.formation-text {
+    margin-top: 20px;
+}
+
 .formation-section-title {
     font-size: 28px;
     font-weight: 700;
@@ -896,6 +1350,10 @@ footer {
     margin: 50px 0 30px 0;
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(46, 168, 255, 0.2);
+}
+
+.formation-section-title:first-of-type {
+    margin-top: 0;
 }
 
 .formation-block {
@@ -917,6 +1375,11 @@ footer {
     background: rgba(240, 192, 96, 0.06);
 }
 
+.formation-block.note-block:hover {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.1);
+}
+
 .formation-title {
     font-size: 20px;
     font-weight: 700;
@@ -924,10 +1387,28 @@ footer {
     margin-bottom: 10px;
 }
 
+.formation-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4ebcff;
+    margin-bottom: 8px;
+}
+
 .formation-block p {
     color: #c8d2df;
     font-size: 15px;
     line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.formation-block p:last-child {
+    margin-bottom: 0;
+}
+
+.formation-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 10px 0;
 }
 
 .formation-block ul li {
@@ -936,7 +1417,6 @@ footer {
     line-height: 1.9;
     padding: 7px 0 7px 28px;
     position: relative;
-    list-style: none;
 }
 
 .formation-block ul li::before {
@@ -944,6 +1424,10 @@ footer {
     color: #2ea8ff;
     position: absolute;
     left: 0;
+}
+
+.formation-block ul li strong {
+    color: #e0e8f0;
 }
 
 .formation-block .note {
@@ -956,9 +1440,80 @@ footer {
     margin-top: 8px;
 }
 
-/* ============================================================
-   СТРАНИЦЫ РАЗДЕЛА "ДОПОЛНИТЕЛЬНО"
-   ============================================================ */
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .formation-page .page-container {
+        max-width: 100%;
+    }
+
+    .formation-page h1 {
+        font-size: 34px;
+    }
+
+    .formation-page .page-subtitle {
+        font-size: 17px;
+    }
+
+    .formation-block {
+        padding: 20px 22px;
+        margin-bottom: 20px;
+    }
+
+    .formation-title {
+        font-size: 17px;
+    }
+
+    .formation-subtitle {
+        font-size: 16px;
+    }
+
+    .formation-block p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .formation-section-title {
+        font-size: 22px;
+        margin: 40px 0 22px 0;
+    }
+
+    .formation-block ul li {
+        font-size: 13px;
+        padding: 5px 0 5px 22px;
+        line-height: 1.7;
+    }
+
+    .formation-block .note {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+}
+    .formation-block p {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    .formation-section-title {
+        font-size: 18px;
+        margin: 30px 0 16px 0;
+        padding-bottom: 6px;
+    }
+
+    .formation-block ul li {
+        font-size: 12px;
+        padding: 4px 0 4px 18px;
+        line-height: 1.6;
+    }
+
+    .formation-block .note {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* ===== СТРАНИЦЫ РАЗДЕЛА "ДОПОЛНИТЕЛЬНО" (как в уставе) ===== */
 
 .extra-page .page-container {
     max-width: 1200px;
@@ -977,6 +1532,10 @@ footer {
     color: #c7d5e5;
 }
 
+.extra-text {
+    margin-top: 20px;
+}
+
 .extra-section-title {
     font-size: 28px;
     font-weight: 700;
@@ -984,6 +1543,10 @@ footer {
     margin: 50px 0 30px 0;
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(46, 168, 255, 0.2);
+}
+
+.extra-section-title:first-of-type {
+    margin-top: 0;
 }
 
 .extra-block {
@@ -1005,6 +1568,11 @@ footer {
     background: rgba(240, 192, 96, 0.06);
 }
 
+.extra-block.note-block:hover {
+    border-left-color: #f0c060;
+    background: rgba(240, 192, 96, 0.1);
+}
+
 .extra-title {
     font-size: 20px;
     font-weight: 700;
@@ -1012,10 +1580,28 @@ footer {
     margin-bottom: 10px;
 }
 
+.extra-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4ebcff;
+    margin-bottom: 8px;
+}
+
 .extra-block p {
     color: #c8d2df;
     font-size: 15px;
     line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.extra-block p:last-child {
+    margin-bottom: 0;
+}
+
+.extra-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 10px 0;
 }
 
 .extra-block ul li {
@@ -1024,7 +1610,6 @@ footer {
     line-height: 1.9;
     padding: 7px 0 7px 28px;
     position: relative;
-    list-style: none;
 }
 
 .extra-block ul li::before {
@@ -1032,6 +1617,10 @@ footer {
     color: #2ea8ff;
     position: absolute;
     left: 0;
+}
+
+.extra-block ul li strong {
+    color: #e0e8f0;
 }
 
 .extra-block .note {
@@ -1044,9 +1633,930 @@ footer {
     margin-top: 8px;
 }
 
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .extra-page .page-container {
+        max-width: 100%;
+    }
+
+    .extra-page h1 {
+        font-size: 34px;
+    }
+
+    .extra-page .page-subtitle {
+        font-size: 17px;
+    }
+
+    .extra-block {
+        padding: 20px 22px;
+        margin-bottom: 20px;
+    }
+
+    .extra-title {
+        font-size: 17px;
+    }
+
+    .extra-subtitle {
+        font-size: 16px;
+    }
+
+    .extra-block p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .extra-section-title {
+        font-size: 22px;
+        margin: 40px 0 22px 0;
+    }
+
+    .extra-block ul li {
+        font-size: 13px;
+        padding: 5px 0 5px 22px;
+        line-height: 1.7;
+    }
+
+    .extra-block .note {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .extra-page h1 {
+        font-size: 26px;
+    }
+
+    .extra-page .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .extra-block {
+        padding: 16px 16px;
+        margin-bottom: 16px;
+    }
+
+    .extra-title {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .extra-subtitle {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .extra-block p {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+
+    .extra-section-title {
+        font-size: 18px;
+        margin: 30px 0 16px 0;
+        padding-bottom: 6px;
+    }
+
+    .extra-block ul li {
+        font-size: 12px;
+        padding: 4px 0 4px 18px;
+        line-height: 1.6;
+    }
+
+    .extra-block .note {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
 /* ============================================================
-   СТРАНИЦА ВООРУЖЕНИЕ
+   НОВЫЕ ФИЧИ: Кнопка Наверх + Частицы + Параллакс + Неон
    ============================================================ */
+/* ===== 2. ЧАСТИЦЫ ===== */
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* ===== 3. ПАРАЛЛАКС ===== */
+
+.hero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ===== 4. НЕОНОВЫЕ АКЦЕНТЫ ===== */
+
+/* Неоновое свечение для заголовков */
+.hero h1,
+.page-container h1,
+.charter-section-title,
+.rules-section-title,
+.formation-section-title,
+.extra-section-title {
+    text-shadow: 0 0 30px rgba(46, 168, 255, 0.15),
+                 0 0 60px rgba(46, 168, 255, 0.05);
+}
+
+/* Неоновая рамка для карточек при наведении */
+.card:hover,
+.rule-block:hover,
+.charter-block:hover,
+.formation-block:hover,
+.extra-block:hover {
+    border-color: #4ebcff;
+    box-shadow: 0 0 30px rgba(46, 168, 255, 0.15),
+                0 0 60px rgba(46, 168, 255, 0.05),
+                inset 0 0 30px rgba(46, 168, 255, 0.02);
+}
+
+/* Неоновые кнопки */
+.primary {
+    background: linear-gradient(135deg, #2ea8ff, #0066cc);
+    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3);
+    transition: 0.4s;
+}
+
+.primary:hover {
+    box-shadow: 0 0 50px rgba(46, 168, 255, 0.5),
+                0 15px 35px rgba(46, 168, 255, 0.4);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.secondary {
+    border: 2px solid rgba(46, 168, 255, 0.6);
+    box-shadow: 0 0 20px rgba(46, 168, 255, 0.1);
+    transition: 0.4s;
+}
+
+.secondary:hover {
+    background: rgba(46, 168, 255, 0.15);
+    box-shadow: 0 0 40px rgba(46, 168, 255, 0.3);
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Неоновый бордер для секции hero */
+.hero {
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4ebcff, transparent);
+    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3);
+    animation: neonPulse 3s infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Неоновые акценты для меню */
+.menu a::after {
+    background: linear-gradient(90deg, #4ebcff, #0066cc);
+}
+
+.menu a:hover {
+    text-shadow: 0 0 20px rgba(46, 168, 255, 0.4);
+}
+
+/* Неоновые точки у списков */
+.rule-block ul li::before,
+.charter-block ul li::before,
+.formation-block ul li::before,
+.extra-block ul li::before {
+    color: #4ebcff;
+    text-shadow: 0 0 10px rgba(46, 168, 255, 0.5);
+}
+
+/* Неоновая подсветка логотипа */
+.logo {
+    text-shadow: 0 0 30px rgba(46, 168, 255, 0.1);
+    transition: 0.4s;
+}
+
+.logo:hover {
+    text-shadow: 0 0 50px rgba(46, 168, 255, 0.3),
+                 0 0 100px rgba(46, 168, 255, 0.1);
+}
+/* ============================================================
+   ВСЕ НОВЫЕ ФИЧИ
+   ============================================================ */
+
+/* ===== 1. АНИМИРОВАННЫЙ ГРАДИЕНТНЫЙ ФОН ===== */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(270deg, #050b14, #0f1f3a, #12335c, #0f1f3a, #050b14);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(46, 168, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(78, 188, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(0, 100, 200, 0.03) 0%, transparent 60%);
+    animation: glowPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+/* ===== 4. СТЕКЛЯННЫЙ ЭФФЕКТ (GLASSMORPHISM) ===== */
+
+.glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.card,
+.rule-block,
+.charter-block,
+.formation-block,
+.extra-block,
+.contact-card,
+.position-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: 0.4s;
+}
+
+.card:hover,
+.rule-block:hover,
+.charter-block:hover,
+.formation-block:hover,
+.extra-block:hover,
+.contact-card:hover,
+.position-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(78, 188, 255, 0.3);
+    box-shadow: 0 8px 40px rgba(46, 168, 255, 0.15),
+                0 0 60px rgba(46, 168, 255, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+header {
+    background: rgba(5, 11, 20, 0.4);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dropdown-content {
+    background: rgba(10, 18, 30, 0.85);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+/* ===== 5. КНОПКА НАВЕРХ ===== */
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    width: 55px;
+    height: 55px;
+    border: 2px solid rgba(78, 188, 255, 0.4);
+    border-radius: 50%;
+    background: rgba(5, 11, 20, 0.6);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    color: #4ebcff;
+    font-size: 26px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 30px rgba(46, 168, 255, 0.15),
+                0 0 60px rgba(46, 168, 255, 0.05);
+    text-shadow: 0 0 20px rgba(46, 168, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scrollTopBtn:hover {
+    transform: translateY(-5px) scale(1.1);
+    border-color: rgba(78, 188, 255, 0.8);
+    box-shadow: 0 8px 40px rgba(46, 168, 255, 0.3),
+                0 0 80px rgba(46, 168, 255, 0.1);
+    background: rgba(46, 168, 255, 0.15);
+    color: #7fcbff;
+}
+
+#scrollTopBtn:active {
+    transform: scale(0.9);
+}
+
+
+/* ===== 6. ПАРАЛЛАКС ===== */
+
+.hero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ===== 7. НЕОНОВЫЕ АКЦЕНТЫ ===== */
+
+.hero h1,
+.page-container h1,
+.charter-section-title,
+.rules-section-title,
+.formation-section-title,
+.extra-section-title {
+    text-shadow: 0 0 30px rgba(46, 168, 255, 0.15),
+                 0 0 60px rgba(46, 168, 255, 0.05);
+}
+
+.card:hover,
+.rule-block:hover,
+.charter-block:hover,
+.formation-block:hover,
+.extra-block:hover {
+    border-color: #4ebcff;
+    box-shadow: 0 0 30px rgba(46, 168, 255, 0.15),
+                0 0 60px rgba(46, 168, 255, 0.05),
+                inset 0 0 30px rgba(46, 168, 255, 0.02);
+}
+
+.primary {
+    background: linear-gradient(135deg, #2ea8ff, #0066cc);
+    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3);
+    transition: 0.4s;
+}
+
+.primary:hover {
+    box-shadow: 0 0 50px rgba(46, 168, 255, 0.5),
+                0 15px 35px rgba(46, 168, 255, 0.4);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.secondary {
+    border: 2px solid rgba(46, 168, 255, 0.6);
+    box-shadow: 0 0 20px rgba(46, 168, 255, 0.1);
+    transition: 0.4s;
+}
+
+.secondary:hover {
+    background: rgba(46, 168, 255, 0.15);
+    box-shadow: 0 0 40px rgba(46, 168, 255, 0.3);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.hero {
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4ebcff, transparent);
+    box-shadow: 0 0 30px rgba(46, 168, 255, 0.3);
+    animation: neonPulse 3s infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.menu a::after {
+    background: linear-gradient(90deg, #4ebcff, #0066cc);
+}
+
+.menu a:hover {
+    text-shadow: 0 0 20px rgba(46, 168, 255, 0.4);
+}
+
+.rule-block ul li::before,
+.charter-block ul li::before,
+.formation-block ul li::before,
+.extra-block ul li::before {
+    color: #4ebcff;
+    text-shadow: 0 0 10px rgba(46, 168, 255, 0.5);
+}
+
+.logo {
+    text-shadow: 0 0 30px rgba(46, 168, 255, 0.1);
+    transition: 0.4s;
+}
+
+.logo:hover {
+    text-shadow: 0 0 50px rgba(46, 168, 255, 0.3),
+                 0 0 100px rgba(46, 168, 255, 0.1);
+}
+
+
+/* ===== 8. 3D-ЭФФЕКТ КАРТОЧЕК ===== */
+
+.features .card {
+    transition: transform 0.15s ease;
+    will-change: transform;
+    position: relative;
+    overflow: hidden;
+}
+
+.features .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.05) 0%,
+        transparent 60%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.features .card:hover::before {
+    opacity: 1;
+}
+
+
+/* ===== 9. АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    /* Скрываем кастомный курсор на мобильных */
+    #custom-cursor {
+        display: none;
+    }
+    body, button, a, input, textarea {
+        cursor: auto;
+    }
+    
+    #scrollTopBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #scrollTopBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+/* ===== ГРАДИЕНТНЫЙ ТЕКСТ ДЛЯ ЗАГОЛОВКОВ ===== */
+
+/* Главный заголовок на hero */
+.hero h1 {
+    background: linear-gradient(90deg, #4ebcff, #a855f7, #4ebcff, #4ebcff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 5s ease infinite;
+    display: inline-block;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Заголовки страниц */
+.page-container h1,
+.extra-page h1,
+.formation-page h1,
+.rules-page h1,
+.charter-page h1,
+.positions-page h1 {
+    background: linear-gradient(90deg, #4ebcff, #a855f7, #4ebcff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 5s ease infinite;
+    display: inline-block;
+}
+
+/* Заголовки секций (для разнообразия) */
+.about h2,
+.features h2,
+.rules-section-title,
+.charter-section-title,
+.formation-section-title,
+.extra-section-title,
+.positions-text h2 {
+    background: linear-gradient(90deg, #4ebcff, #60a5fa, #4ebcff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 6s ease infinite;
+    display: inline-block;
+}
+
+/* Для заголовков в карточках */
+.card h3,
+.contact-card h3,
+.position-card h3 {
+    background: linear-gradient(90deg, #4ebcff, #818cf8, #4ebcff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 4s ease infinite;
+    display: inline-block;
+}
+/* ===== СМЕНА ФОНА ПРИ СКРОЛЛЕ ===== */
+
+/* Анимированный фон с переливом */
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(270deg, #050b14, #0f1f3a, #12335c, #0f1f3a, #050b14);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+    transition: opacity 0.8s ease;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Дополнительное свечение при скролле */
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(46, 168, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(78, 188, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(0, 100, 200, 0.03) 0%, transparent 60%);
+    animation: glowPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Смена тона при скролле (эффект) */
+body.scrolled .background::before {
+    background: radial-gradient(circle at 30% 40%, rgba(100, 100, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(46, 255, 200, 0.05) 0%, transparent 40%);
+    transition: background 1s ease;
+}
+/* ===== RIPPLE-ЭФФЕКТ НА КНОПКАХ ===== */
+
+.ripple-btn {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: rippleAnimation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleAnimation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Для кнопок .primary и .secondary */
+.primary,
+.secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.primary .ripple {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.secondary .ripple {
+    background: rgba(46, 168, 255, 0.3);
+}
+/* Синхронизация — одинаковая анимация для фона и текста */
+.background,
+.hero h1,
+.page-container h1 {
+    animation: syncGradient 12s ease infinite;
+}
+
+@keyframes syncGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.background {
+    background: linear-gradient(270deg, #050b14, #0f1f3a, #12335c, #0f1f3a, #050b14);
+    background-size: 400% 400%;
+}
+
+.hero h1,
+.page-container h1 {
+    background: linear-gradient(270deg, #4ebcff, #a855f7, #4ebcff, #a855f7, #4ebcff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+/* Принудительная центровка для заголовков */
+.hero-content h1,
+.page-container h1,
+.about h2,
+.features h2 {
+    display: block !important;
+    text-align: center !important;
+}
+
+/* Для родительских контейнеров */
+.hero-content,
+.page-container,
+.about,
+.features {
+    text-align: center;
+}
+
+/* Но для страниц с левым текстом — оставляем левое выравнивание */
+.formation-page .page-container,
+.rules-page .page-container,
+.charter-page .page-container,
+.extra-page .page-container,
+.positions-page .page-container {
+    text-align: left;
+}
+
+/* А заголовки внутри них — по центру */
+.formation-page .page-container h1,
+.rules-page .page-container h1,
+.charter-page .page-container h1,
+.extra-page .page-container h1,
+.positions-page .page-container h1 {
+    display: block !important;
+    text-align: center !important;
+}
+/* ===== СТРАНИЦА ВООРУЖЕНИЕ ===== */
+
+.weapons-page .page-container {
+    max-width: 1200px;
+    text-align: left;
+}
+
+.weapons-page h1 {
+    text-align: center;
+}
+
+.weapons-page .page-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.weapons-text {
+    margin-top: 20px;
+}
+
+/* Блок оружия (текст + картинка) */
+.weapon-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 16px;
+    padding: 30px 35px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.weapon-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+/* Картинка */
+.weapon-image {
+    flex: 0 0 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.image-placeholder {
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.image-placeholder span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 400;
+}
+
+.weapon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Текст */
+.weapon-info {
+    flex: 1;
+}
+
+.weapon-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 12px;
+}
+
+.weapon-info p {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.weapon-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.weapon-info ul li {
+    color: #c8d2df;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 4px 0 4px 22px;
+    position: relative;
+}
+
+.weapon-info ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.weapon-info ul li strong {
+    color: #e0e8f0;
+}
+
+/* Обратный порядок (картинка справа) */
+.weapon-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .weapon-block {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .weapon-block.reverse {
+        flex-direction: column;
+    }
+
+    .weapon-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+    }
+
+    .weapon-title {
+        font-size: 20px;
+    }
+
+    .weapon-info p {
+        font-size: 14px;
+    }
+
+    .weapon-info ul li {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weapon-block {
+        padding: 16px;
+    }
+
+    .weapon-image {
+        height: 150px;
+        max-width: 200px;
+    }
+
+    .weapon-title {
+        font-size: 18px;
+    }
+
+    .weapon-info p {
+        font-size: 13px;
+    }
+
+    .weapon-info ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 18px;
+    }
+}
+/* ===== СТРАНИЦА ВООРУЖЕНИЕ ===== */
 
 .weapons-page .page-container {
     max-width: 1300px;
@@ -1065,6 +2575,11 @@ footer {
     color: #c7d5e5;
 }
 
+.weapons-text {
+    margin-top: 20px;
+}
+
+/* Блок оружия (текст + картинка) */
 .weapon-block {
     display: flex;
     align-items: center;
@@ -1082,10 +2597,7 @@ footer {
     border-left-color: #2ea8ff;
 }
 
-.weapon-block.reverse {
-    flex-direction: row-reverse;
-}
-
+/* Картинка */
 .weapon-image {
     flex: 0 0 240px;
     height: 240px;
@@ -1104,6 +2616,7 @@ footer {
     object-fit: contain;
 }
 
+/* Сетка для 3 картинок DC-17m */
 .weapon-images-grid {
     flex: 0 0 300px;
     display: grid;
@@ -1139,8 +2652,10 @@ footer {
     margin-top: 6px;
     text-align: center;
     font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
+/* Текст */
 .weapon-info {
     flex: 1;
 }
@@ -1159,13 +2674,18 @@ footer {
     margin-bottom: 16px;
 }
 
+.weapon-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .weapon-info ul li {
     color: #c8d2df;
     font-size: 15px;
     line-height: 1.8;
     padding: 6px 0 6px 26px;
     position: relative;
-    list-style: none;
 }
 
 .weapon-info ul li::before {
@@ -1175,126 +2695,69 @@ footer {
     left: 0;
 }
 
-/* ============================================================
-   АДАПТИВ
-   ============================================================ */
+.weapon-info ul li strong {
+    color: #e0e8f0;
+}
 
-@media (max-width: 900px) {
-    .hero h1 {
-        font-size: 54px;
+/* Обратный порядок */
+.weapon-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 992px) {
+    .weapon-block {
+        gap: 30px;
+        padding: 28px 30px;
     }
-    .menu {
-        display: none;
+
+    .weapon-image {
+        flex: 0 0 200px;
+        height: 200px;
     }
-    .navbar {
-        padding: 0 20px;
+
+    .weapon-images-grid {
+        flex: 0 0 240px;
     }
-    .about h2 {
-        font-size: 36px;
+
+    .weapon-image-sub img {
+        height: 90px;
+    }
+
+    .weapon-title {
+        font-size: 22px;
+    }
+
+    .weapon-info p {
+        font-size: 15px;
+    }
+
+    .weapon-info ul li {
+        font-size: 14px;
+        padding: 5px 0 5px 22px;
     }
 }
 
 @media (max-width: 768px) {
-    .page-container h1 {
-        font-size: 44px;
-    }
-    .contacts-grid {
-        gap: 14px;
-        max-width: 380px;
-    }
-    .contact-card {
-        padding: 16px 14px;
-        border-radius: 35px;
-    }
-    .contact-card h3 {
-        font-size: 15px;
-    }
-    .contact-card p {
-        font-size: 11px;
-    }
-    .contact-btn {
-        padding: 5px 14px;
-        font-size: 11px;
-    }
-    .positions-page .page-container {
-        max-width: 100%;
-    }
-    .position-block {
-        padding: 18px 20px;
-        margin-bottom: 25px;
-    }
-    .position-title {
-        font-size: 20px;
-    }
-    .position-block p {
-        font-size: 14px;
-    }
-    .positions-text h2 {
-        font-size: 26px;
-        margin: 40px 0 25px 0;
-    }
-    .rule-block {
-        padding: 18px 20px;
-        margin-bottom: 20px;
-    }
-    .rule-title {
-        font-size: 17px;
-    }
-    .rules-section-title {
-        font-size: 22px;
-        margin: 35px 0 22px 0;
-    }
-    .charter-block {
-        padding: 20px 22px;
-        margin-bottom: 20px;
-    }
-    .charter-title {
-        font-size: 17px;
-    }
-    .charter-section-title {
-        font-size: 22px;
-        margin: 40px 0 24px 0;
-    }
-    .formation-page .page-container {
-        max-width: 100%;
-    }
-    .formation-page h1 {
-        font-size: 34px;
-    }
-    .formation-block {
-        padding: 20px 22px;
-        margin-bottom: 20px;
-    }
-    .extra-page .page-container {
-        max-width: 100%;
-    }
-    .extra-page h1 {
-        font-size: 34px;
-    }
-    .extra-block {
-        padding: 20px 22px;
-        margin-bottom: 20px;
-    }
     .weapon-block {
         flex-direction: column;
         padding: 24px 22px;
         gap: 24px;
+        margin-bottom: 25px;
     }
+
     .weapon-block.reverse {
         flex-direction: column;
     }
+
     .weapon-image {
         flex: 0 0 auto;
         width: 100%;
         max-width: 280px;
         height: 200px;
     }
-    .weapons-page h1 {
-        font-size: 34px;
-    }
-    .weapon-title {
-        font-size: 20px;
-    }
+
     .weapon-images-grid {
         flex: 0 0 auto;
         width: 100%;
@@ -1302,155 +2765,105 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
     }
+
     .weapon-image-sub img {
         height: 80px;
     }
-    #scrollTopBtn {
-        width: 45px;
-        height: 45px;
+
+    .weapons-page h1 {
+        font-size: 34px;
+    }
+
+    .weapons-page .page-subtitle {
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+
+    .weapon-title {
         font-size: 20px;
-        bottom: 20px;
-        right: 20px;
     }
-    #custom-cursor {
-        display: none;
+
+    .weapon-info p {
+        font-size: 14px;
+        line-height: 1.7;
     }
-    body, button, a, input, textarea {
-        cursor: auto;
+
+    .weapon-info ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px;
+        line-height: 1.6;
+    }
+
+    .image-label {
+        font-size: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 38px;
-    }
-    .page-container h1 {
-        font-size: 32px;
-    }
-    .contacts-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        gap: 10px;
-    }
-    .contact-card {
-        padding: 14px 10px;
-        border-radius: 25px;
-    }
-    .contact-card h3 {
-        font-size: 13px;
-    }
-    .contact-card p {
-        font-size: 10px;
-        margin-bottom: 6px;
-    }
-    .contact-btn {
-        padding: 4px 12px;
-        font-size: 10px;
-    }
-    .position-block {
-        padding: 14px 14px;
-        margin-bottom: 20px;
-    }
-    .position-title {
-        font-size: 17px;
-    }
-    .position-block p {
-        font-size: 13px;
-    }
-    .positions-text h2 {
-        font-size: 20px;
-        margin: 30px 0 20px 0;
-    }
-    .rule-block {
-        padding: 14px 14px;
-        margin-bottom: 16px;
-    }
-    .rule-title {
-        font-size: 15px;
-    }
-    .rule-block p {
-        font-size: 13px;
-    }
-    .rules-section-title {
-        font-size: 18px;
-        margin: 25px 0 16px 0;
-    }
-    .charter-block {
-        padding: 16px 16px;
-        margin-bottom: 16px;
-    }
-    .charter-title {
-        font-size: 15px;
-    }
-    .charter-block p {
-        font-size: 13px;
-    }
-    .charter-section-title {
-        font-size: 18px;
-        margin: 30px 0 18px 0;
-    }
-    .formation-page h1 {
-        font-size: 26px;
-    }
-    .formation-block {
-        padding: 16px 16px;
-        margin-bottom: 16px;
-    }
-    .formation-block p {
-        font-size: 13px;
-    }
-    .extra-page h1 {
-        font-size: 26px;
-    }
-    .extra-block {
-        padding: 16px 16px;
-        margin-bottom: 16px;
-    }
-    .extra-block p {
-        font-size: 13px;
-    }
     .weapon-block {
         padding: 18px 16px;
         gap: 18px;
         margin-bottom: 18px;
     }
+
     .weapon-image {
         max-width: 200px;
         height: 160px;
     }
-    .weapons-page h1 {
-        font-size: 26px;
-    }
-    .weapon-title {
-        font-size: 17px;
-    }
-    .weapon-info p {
-        font-size: 13px;
-    }
+
     .weapon-images-grid {
         max-width: 300px;
         gap: 8px;
     }
+
     .weapon-image-sub {
         padding: 6px;
     }
+
     .weapon-image-sub img {
         height: 60px;
     }
+
+    .weapons-page h1 {
+        font-size: 26px;
+    }
+
+    .weapons-page .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .weapon-title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .weapon-info p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .weapon-info ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 18px;
+        line-height: 1.5;
+    }
+
     .image-label {
         font-size: 9px;
+        margin-top: 4px;
     }
-    #scrollTopBtn {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        bottom: 15px;
-        right: 15px;
-    }
-    footer {
-        padding: 30px 20px;
-    }
-    .footer-copy {
-        font-size: 11px;
-    }
+}
+/* ===== СЕТКА НА ФОНЕ (CANVAS) ===== */
+
+#gridCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5; /* попробуй увеличить до 0.8, чтобы увидеть */
 }
