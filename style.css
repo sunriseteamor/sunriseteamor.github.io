@@ -2556,3 +2556,302 @@ body.scrolled .background::before {
         padding: 3px 0 3px 18px;
     }
 }
+/* ===== СТРАНИЦА ВООРУЖЕНИЕ ===== */
+
+.weapons-page .page-container {
+    max-width: 1300px;
+    text-align: left;
+}
+
+.weapons-page h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.weapons-page .page-subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: #c7d5e5;
+}
+
+.weapons-text {
+    margin-top: 20px;
+}
+
+/* Блок оружия (текст + картинка) */
+.weapon-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(46, 168, 255, 0.3);
+    border-radius: 16px;
+    padding: 35px 40px;
+    margin-bottom: 35px;
+    transition: 0.3s;
+}
+
+.weapon-block:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-left-color: #2ea8ff;
+}
+
+/* Картинка */
+.weapon-image {
+    flex: 0 0 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.weapon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Сетка для 3 картинок DC-17m */
+.weapon-images-grid {
+    flex: 0 0 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.weapon-image-sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.weapon-image-sub:hover {
+    border-color: #2ea8ff;
+    background: rgba(46, 168, 255, 0.05);
+}
+
+.weapon-image-sub img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+
+.image-label {
+    font-size: 11px;
+    color: #888;
+    margin-top: 6px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Текст */
+.weapon-info {
+    flex: 1;
+}
+
+.weapon-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2ea8ff;
+    margin-bottom: 14px;
+}
+
+.weapon-info p {
+    color: #c8d2df;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.weapon-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.weapon-info ul li {
+    color: #c8d2df;
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 6px 0 6px 26px;
+    position: relative;
+}
+
+.weapon-info ul li::before {
+    content: "▸";
+    color: #2ea8ff;
+    position: absolute;
+    left: 0;
+}
+
+.weapon-info ul li strong {
+    color: #e0e8f0;
+}
+
+/* Обратный порядок */
+.weapon-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 992px) {
+    .weapon-block {
+        gap: 30px;
+        padding: 28px 30px;
+    }
+
+    .weapon-image {
+        flex: 0 0 200px;
+        height: 200px;
+    }
+
+    .weapon-images-grid {
+        flex: 0 0 240px;
+    }
+
+    .weapon-image-sub img {
+        height: 90px;
+    }
+
+    .weapon-title {
+        font-size: 22px;
+    }
+
+    .weapon-info p {
+        font-size: 15px;
+    }
+
+    .weapon-info ul li {
+        font-size: 14px;
+        padding: 5px 0 5px 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .weapon-block {
+        flex-direction: column;
+        padding: 24px 22px;
+        gap: 24px;
+        margin-bottom: 25px;
+    }
+
+    .weapon-block.reverse {
+        flex-direction: column;
+    }
+
+    .weapon-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 280px;
+        height: 200px;
+    }
+
+    .weapon-images-grid {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .weapon-image-sub img {
+        height: 80px;
+    }
+
+    .weapons-page h1 {
+        font-size: 34px;
+    }
+
+    .weapons-page .page-subtitle {
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+
+    .weapon-title {
+        font-size: 20px;
+    }
+
+    .weapon-info p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .weapon-info ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px;
+        line-height: 1.6;
+    }
+
+    .image-label {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weapon-block {
+        padding: 18px 16px;
+        gap: 18px;
+        margin-bottom: 18px;
+    }
+
+    .weapon-image {
+        max-width: 200px;
+        height: 160px;
+    }
+
+    .weapon-images-grid {
+        max-width: 300px;
+        gap: 8px;
+    }
+
+    .weapon-image-sub {
+        padding: 6px;
+    }
+
+    .weapon-image-sub img {
+        height: 60px;
+    }
+
+    .weapons-page h1 {
+        font-size: 26px;
+    }
+
+    .weapons-page .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .weapon-title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .weapon-info p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .weapon-info ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 18px;
+        line-height: 1.5;
+    }
+
+    .image-label {
+        font-size: 9px;
+        margin-top: 4px;
+    }
+}
