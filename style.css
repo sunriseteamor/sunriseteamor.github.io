@@ -873,7 +873,7 @@ footer {
 /* ===== СТРАНИЦА ПРАВИЛА (ОБНОВЛЁННАЯ) ===== */
 
 .rules-page .page-container {
-    max-width: 1100px;
+    max-width: 1200px;
     text-align: left;
 }
 
@@ -883,7 +883,7 @@ footer {
 
 .rules-page .page-subtitle {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .rules-text {
@@ -894,8 +894,8 @@ footer {
     font-size: 28px;
     font-weight: 700;
     color: #4ebcff;
-    margin: 40px 0 25px 0;
-    padding-bottom: 8px;
+    margin: 50px 0 30px 0;
+    padding-bottom: 10px;
     border-bottom: 2px solid rgba(46, 168, 255, 0.2);
 }
 
@@ -907,8 +907,8 @@ footer {
     background: rgba(255, 255, 255, 0.04);
     border-left: 3px solid rgba(46, 168, 255, 0.3);
     border-radius: 12px;
-    padding: 20px 28px;
-    margin-bottom: 20px;
+    padding: 24px 32px;
+    margin-bottom: 28px;
     transition: 0.3s;
 }
 
@@ -931,14 +931,14 @@ footer {
     font-size: 20px;
     font-weight: 700;
     color: #2ea8ff;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .rule-block p {
     color: #c8d2df;
     font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 8px;
+    line-height: 1.8;
+    margin-bottom: 10px;
 }
 
 .rule-block p:last-child {
@@ -948,14 +948,14 @@ footer {
 .rule-block ul {
     list-style: none;
     padding: 0;
-    margin: 8px 0 8px 0;
+    margin: 10px 0 10px 0;
 }
 
 .rule-block ul li {
     color: #c8d2df;
     font-size: 14px;
-    line-height: 1.6;
-    padding: 4px 0 4px 22px;
+    line-height: 1.7;
+    padding: 5px 0 5px 24px;
     position: relative;
 }
 
@@ -969,8 +969,9 @@ footer {
 .rule-block .sub-rule {
     color: #b0c4de;
     font-size: 14px;
-    padding: 2px 0 2px 16px;
+    padding: 4px 0 4px 18px;
     position: relative;
+    line-height: 1.6;
 }
 
 .rule-block .sub-rule::before {
@@ -983,8 +984,8 @@ footer {
 .punishment {
     color: #f0a060;
     font-weight: 500;
-    margin-top: 6px;
-    padding: 6px 12px;
+    margin-top: 8px;
+    padding: 8px 16px;
     background: rgba(240, 160, 96, 0.06);
     border-radius: 6px;
     display: inline-block;
@@ -995,12 +996,12 @@ footer {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    padding: 30px 35px;
+    padding: 35px 40px;
     margin-bottom: 25px;
 }
 
 .hierarchy-level {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .hierarchy-level:last-child {
@@ -1010,4 +1011,126 @@ footer {
 .hierarchy-level h4 {
     font-size: 18px;
     color: #4ebcff;
-    margin
+    margin-bottom: 12px;
+}
+
+.hierarchy-level ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hierarchy-level ul li {
+    color: #c8d2df;
+    font-size: 15px;
+    padding: 4px 0 4px 0;
+    line-height: 1.6;
+}
+
+.hierarchy-icon {
+    margin-right: 8px;
+}
+
+/* ===== АДАПТИВ ===== */
+
+@media (max-width: 768px) {
+    .rules-page .page-container {
+        max-width: 100%;
+    }
+
+    .rule-block {
+        padding: 18px 20px;
+        margin-bottom: 20px;
+    }
+
+    .rule-title {
+        font-size: 17px;
+    }
+
+    .rule-block p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .rules-section-title {
+        font-size: 22px;
+        margin: 35px 0 22px 0;
+    }
+
+    .rule-block ul li {
+        font-size: 13px;
+        padding: 4px 0 4px 20px;
+    }
+
+    .rule-block .sub-rule {
+        font-size: 13px;
+        padding: 3px 0 3px 16px;
+    }
+
+    .punishment {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .hierarchy-block {
+        padding: 22px 20px;
+    }
+
+    .hierarchy-level h4 {
+        font-size: 16px;
+    }
+
+    .hierarchy-level ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rule-block {
+        padding: 14px 14px;
+        margin-bottom: 16px;
+    }
+
+    .rule-title {
+        font-size: 15px;
+    }
+
+    .rule-block p {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .rules-section-title {
+        font-size: 18px;
+        margin: 25px 0 16px 0;
+    }
+
+    .rule-block ul li {
+        font-size: 12px;
+        padding: 3px 0 3px 16px;
+    }
+
+    .rule-block .sub-rule {
+        font-size: 12px;
+        padding: 2px 0 2px 14px;
+    }
+
+    .punishment {
+        font-size: 12px;
+        padding: 4px 10px;
+        margin-top: 4px;
+    }
+
+    .hierarchy-block {
+        padding: 16px 14px;
+    }
+
+    .hierarchy-level h4 {
+        font-size: 14px;
+    }
+
+    .hierarchy-level ul li {
+        font-size: 13px;
+        padding: 3px 0;
+    }
+}
