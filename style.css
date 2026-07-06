@@ -508,7 +508,7 @@ footer {
 }
 
 .page-container {
-    max-width: 1200px;
+    max-width: 1100px;
     width: 100%;
     text-align: center;
 }
@@ -524,50 +524,53 @@ footer {
     margin-bottom: 60px;
 }
 
-/* Сетка контактов — такие же карточки, как на главной */
+/* Сетка контактов */
 .contacts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Карточка контакта — используем стиль .card из главной */
+/* Карточка контакта */
 .contact-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 22px;
-    padding: 35px;
+    border-radius: 60px;
+    padding: 30px 25px;
     transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
 }
 
 .contact-card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
     border-color: #2ea8ff;
     box-shadow: 0 15px 40px rgba(46, 168, 255, 0.25);
 }
 
 .contact-card h3 {
-    font-size: 26px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .contact-card p {
     color: #bcc8d6;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
 }
 
 .contact-btn {
     display: inline-block;
     background: rgba(46, 168, 255, 0.15);
     color: #4ebcff;
-    padding: 12px 28px;
+    padding: 10px 24px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     transition: 0.3s;
     border: 1px solid rgba(46, 168, 255, 0.2);
 }
@@ -600,15 +603,21 @@ footer {
 
     .page-subtitle {
         font-size: 17px;
+        margin-bottom: 40px;
     }
 
     .contacts-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px;
     }
 
     .contact-card {
-        padding: 30px 20px;
+        padding: 25px 20px;
+        border-radius: 40px;
+    }
+
+    .contact-card h3 {
+        font-size: 19px;
     }
 }
 
@@ -617,11 +626,27 @@ footer {
         font-size: 32px;
     }
 
+    .page-subtitle {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
     .contacts-grid {
         grid-template-columns: 1fr;
+        max-width: 350px;
+        gap: 16px;
+    }
+
+    .contact-card {
+        padding: 22px 20px;
+        border-radius: 50px;
     }
 
     .contact-card h3 {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .contact-card p {
+        font-size: 13px;
     }
 }
